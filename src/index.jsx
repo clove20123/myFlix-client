@@ -7,7 +7,7 @@ import MainView from './components/main-view/main-view';
 import './index.scss';
 
 //Main component (will eventually use all the others)
-class MainView extends React.Component {
+class MyFlixApplication extends React.Component {
   render() {
     return (
       <MainView />
@@ -15,7 +15,6 @@ class MainView extends React.Component {
   }
 }
 
-export default MainView;
 
 //Finds the root of your app
 const container = document.getElementsByClassName('app-container')
