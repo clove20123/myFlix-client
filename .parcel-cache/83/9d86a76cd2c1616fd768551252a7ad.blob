@@ -1,0 +1,80 @@
+var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "LoginView", ()=>LoginView
+);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+function LoginView(props) {
+    _s();
+    const [Username, setUsername] = _react.useState('');
+    const [Password, setPassword] = _react.useState('');
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        console.log(Username, Password);
+        props.onLoggedIn(Username);
+    };
+    return(/*#__PURE__*/ _reactDefault.default.createElement("form", {
+        __source: {
+            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
+            lineNumber: 15
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+        __source: {
+            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
+            lineNumber: 16
+        },
+        __self: this
+    }, "Username:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
+        type: "text",
+        value: Username,
+        onChange: (e)=>setUsername(e.target.value)
+        ,
+        __source: {
+            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
+            lineNumber: 18
+        },
+        __self: this
+    })), /*#__PURE__*/ _reactDefault.default.createElement("label", {
+        __source: {
+            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
+            lineNumber: 20
+        },
+        __self: this
+    }, "Password:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
+        type: "password",
+        value: Password,
+        onChange: (e)=>setPassword(e.target.value)
+        ,
+        __source: {
+            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
+            lineNumber: 22
+        },
+        __self: this
+    })), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        type: "submit",
+        onClick: handleSubmit,
+        __source: {
+            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
+            lineNumber: 24
+        },
+        __self: this
+    }, "Submit")));
+}
+_s(LoginView, "F0KNa4WU+CLZaSc0fDS4xoJP4yg=");
+_c = LoginView;
+var _c;
+$RefreshReg$(_c, "LoginView");
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

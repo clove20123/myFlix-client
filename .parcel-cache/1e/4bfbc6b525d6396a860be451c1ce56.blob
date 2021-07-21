@@ -21880,9 +21880,9 @@ class MainView extends _reactDefault.default.Component {
             console.log(error);
         });
     }
-    setSelectedMovie(movie) {
+    setSelectedMovie(newSelectedMovie) {
         this.setState({
-            selectedMovie: movie
+            selectedMovie: newSelectedMovie
         });
     }
     onLoggedIn(user) {
@@ -21890,27 +21890,23 @@ class MainView extends _reactDefault.default.Component {
             user
         });
     }
-    onRegister(register) {
-        this.setState({
-            register
-        });
-    }
     render() {
         const { movies , selectedMovie , user  } = this.state;
-        if (!user) return(/*#__PURE__*/ _reactDefault.default.createElement(_loginView.LoginView, {
+        /* If there is no user, the LoginView is rendered. If there is a user logged in, the user details are *passed as a prop to the LoginView*/ if (!user) return(/*#__PURE__*/ _reactDefault.default.createElement(_loginView.LoginView, {
             onLoggedIn: (user1)=>this.onLoggedIn(user1)
             ,
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 54
+                lineNumber: 48
             },
             __self: this
         }));
+        // Before the movies have been loaded
         if (movies.length === 0) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "main-view",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 57
+                lineNumber: 51
             },
             __self: this
         }));
@@ -21918,7 +21914,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 60
+                lineNumber: 54
             },
             __self: this
         }, selectedMovie ? /*#__PURE__*/ _reactDefault.default.createElement(_movieView.MovieView, {
@@ -21928,7 +21924,7 @@ class MainView extends _reactDefault.default.Component {
             },
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 63
+                lineNumber: 57
             },
             __self: this
         }) : movies.map((movie)=>/*#__PURE__*/ _reactDefault.default.createElement(_movieCard.MovieCard, {
@@ -21939,7 +21935,7 @@ class MainView extends _reactDefault.default.Component {
                 },
                 __source: {
                     fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                    lineNumber: 65
+                    lineNumber: 59
                 },
                 __self: this
             })
@@ -24520,4 +24516,4 @@ $RefreshReg$(_c, "RegistrationView");
 }
 },{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr"}],"JOw5y":[function() {},{}]},["1j6wU","4x6Mp","50ops"], "50ops", "parcelRequire279c")
 
-//# sourceMappingURL=index.bf6c691a.js.map
+//# sourceMappingURL=index.HASH_REF_a039d63b35cdd9534fd71096bf6c691a.js.map

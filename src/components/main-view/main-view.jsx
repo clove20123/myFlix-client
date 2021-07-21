@@ -14,12 +14,12 @@ class MainView extends React.Component {
       movies: [],
       selectedMovie: null,
       user: null
-    }
+    };
   }
 
   componentDidMount(){
     axios.get('https://my-movie-api-20123.herokuapp.com/movies')
-      .then(response => {
+      .then((response) => {
         this.setState({
           movies: response.data
         });
@@ -29,9 +29,9 @@ class MainView extends React.Component {
       });
   }
 
-  setSelectedMovie(newSelectedMovie) {
+  setSelectedMovie(movie) {
     this.setState({
-      selectedMovie: newSelectedMovie
+      selectedMovie: movie,
     });
   }
 
@@ -41,18 +41,24 @@ class MainView extends React.Component {
     });
   }
 
+  onRegister(register) {
+    this.setState({
+      register,
+    });
+  }
+
   render() {
     const { movies, selectedMovie, user } = this.state;
 
-    /* If there is no user, the LoginView is rendered. If there is a user logged in, the user details are *passed as a prop to the LoginView*/
-    if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
+    
+    if (!user) return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
 
-    // Before the movies have been loaded
+    
     if (movies.length === 0) return <div className="main-view" />;
 
     return (
       <div className="main-view">
-        {/*If the state of `selectedMovie` is not null, that selected movie will be returned otherwise, all *movies will be returned*/}
+        
         {selectedMovie
           ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
           : movies.map(movie => (
