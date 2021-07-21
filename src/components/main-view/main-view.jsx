@@ -4,7 +4,7 @@ import axios from 'axios';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 
-export default class MainView extends React.Component {
+class MainView extends React.Component {
 
   constructor(){
     super();
@@ -51,3 +51,5 @@ export default class MainView extends React.Component {
   }
 
 }
+
+export default MainView;
