@@ -21859,7 +21859,6 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _loginView = require("../login-view/login-view");
-var _registrationView = require("../registration-view/registration-view");
 var _movieCard = require("../movie-card/movie-card");
 var _movieView = require("../movie-view/movie-view");
 class MainView extends _reactDefault.default.Component {
@@ -21897,7 +21896,7 @@ class MainView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 48
+                lineNumber: 47
             },
             __self: this
         }));
@@ -21906,7 +21905,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 51
+                lineNumber: 50
             },
             __self: this
         }));
@@ -21914,7 +21913,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 54
+                lineNumber: 53
             },
             __self: this
         }, selectedMovie ? /*#__PURE__*/ _reactDefault.default.createElement(_movieView.MovieView, {
@@ -21924,7 +21923,7 @@ class MainView extends _reactDefault.default.Component {
             },
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 57
+                lineNumber: 56
             },
             __self: this
         }) : movies.map((movie)=>/*#__PURE__*/ _reactDefault.default.createElement(_movieCard.MovieCard, {
@@ -21935,7 +21934,7 @@ class MainView extends _reactDefault.default.Component {
                 },
                 __source: {
                     fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                    lineNumber: 59
+                    lineNumber: 58
                 },
                 __self: this
             })
@@ -21949,7 +21948,7 @@ exports.default = MainView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","axios":"7rA65","../movie-card/movie-card":"79ANl","../movie-view/movie-view":"6nU5P","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","../login-view/login-view":"jtwvq","../registration-view/registration-view":"37jdh"}],"7rA65":[function(require,module,exports) {
+},{"react":"3b2NM","axios":"7rA65","../movie-card/movie-card":"79ANl","../movie-view/movie-view":"6nU5P","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","../login-view/login-view":"jtwvq"}],"7rA65":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"4qfhW"}],"4qfhW":[function(require,module,exports) {
@@ -23349,15 +23348,8 @@ MovieCard.proptypes = {
     movie: _propTypesDefault.default.shape({
         Title: _propTypesDefault.default.string.isRequired,
         Description: _propTypesDefault.default.string.isRequired,
-        Genre: _propTypesDefault.default.shape({
-            Name: _propTypesDefault.default.string.isRequired,
-            Description: _propTypesDefault.default.string.isRequired
-        }).isRequired,
-        Director: _propTypesDefault.default.shape({
-            Name: _propTypesDefault.default.string.isRequired,
-            Bio: _propTypesDefault.default.string.isRequired,
-            Birth: _propTypesDefault.default.string.isRequired
-        }).isRequired
+        Genre: _propTypesDefault.default.string.isRequired,
+        Director: _propTypesDefault.default.string.isRequired
     }).isRequired,
     onMovieCClick: _propTypesDefault.default.func.isRequired
 };
@@ -24385,129 +24377,6 @@ $RefreshReg$(_c, "LoginView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr"}],"37jdh":[function(require,module,exports) {
-var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "RegistrationView", ()=>RegistrationView
-);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _s = $RefreshSig$();
-function RegistrationView(props) {
-    _s();
-    const [Username, setUsername] = _react.useState('');
-    const [Password, setPassword] = _react.useState('');
-    const [Email, setEmail] = _react.useState('');
-    const [Birthday, setBirthday] = _react.useState('');
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-        console.log(Username, Password, Email, Birthday);
-    };
-    return(/*#__PURE__*/ _reactDefault.default.createElement("form", {
-        __source: {
-            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
-            lineNumber: 15
-        },
-        __self: this
-    }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
-        __source: {
-            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
-            lineNumber: 16
-        },
-        __self: this
-    }, "Username:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
-        type: "text",
-        value: username,
-        onChange: (e)=>setUsername(e.target.value)
-        ,
-        __source: {
-            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
-            lineNumber: 18
-        },
-        __self: this
-    })), /*#__PURE__*/ _reactDefault.default.createElement("label", {
-        __source: {
-            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
-            lineNumber: 24
-        },
-        __self: this
-    }, "Create Password:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
-        type: "password",
-        value: password,
-        onChange: (e)=>setPassword(e.target.value)
-        ,
-        __source: {
-            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
-            lineNumber: 26
-        },
-        __self: this
-    }), /*#__PURE__*/ _reactDefault.default.createElement("label", {
-        __source: {
-            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
-            lineNumber: 31
-        },
-        __self: this
-    }, "Email:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
-        type: "email",
-        value: email,
-        onChange: (e)=>setEmail(e.target.value)
-        ,
-        __source: {
-            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
-            lineNumber: 33
-        },
-        __self: this
-    })), /*#__PURE__*/ _reactDefault.default.createElement("label", {
-        __source: {
-            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
-            lineNumber: 39
-        },
-        __self: this
-    }, "Birthday:", /*#__PURE__*/ _reactDefault.default.createElement("input", {
-        type: "date",
-        value: birthday,
-        onChange: (e)=>setBirthday(e.target.value)
-        ,
-        __source: {
-            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
-            lineNumber: 41
-        },
-        __self: this
-    }))), /*#__PURE__*/ _reactDefault.default.createElement("button", {
-        type: "submit",
-        onClick: handleSubmit,
-        __source: {
-            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
-            lineNumber: 48
-        },
-        __self: this
-    }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
-        onClick: ()=>{
-            onBackClick(null);
-        },
-        __source: {
-            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
-            lineNumber: 49
-        },
-        __self: this
-    }, "Back"), "Submit")));
-}
-_s(RegistrationView, "D0lB37FO5C6TvcokQK9Cc01QTS8=");
-_c = RegistrationView;
-var _c;
-$RefreshReg$(_c, "RegistrationView");
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
 },{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr"}],"JOw5y":[function() {},{}]},["1j6wU","4x6Mp","50ops"], "50ops", "parcelRequire279c")
 
-//# sourceMappingURL=index.bf6c691a.js.map
+//# sourceMappingURL=index.HASH_REF_a039d63b35cdd9534fd71096bf6c691a.js.map
