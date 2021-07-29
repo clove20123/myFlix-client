@@ -45,7 +45,7 @@ class MainView extends React.Component {
 
   getMovies(token){
     axios.get('https://my-movie-api-20123.herokuapp.com/movies', {
-      header: { Authorization: `Bearer ${token}` }
+      headers: { Authorization: `Bearer ${token}` }
     })
     .then(response => {
       // Assign the result to the state
