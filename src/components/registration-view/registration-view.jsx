@@ -38,10 +38,22 @@ export function RegistrationView(props) {
         <Form.Control type="date" placeholder="00-00-0000" value={birthdate} onChange={e => setBirthdate(e.target.value)} required />
         <Form.Control.Feedback type='invalid'>Please enter a valid birthday.</Form.Control.Feedback>
       </Form.Group>
-      <button type="submit" onClick={handleSubmit}>
-        <button onClick={() => { onBackClick(null); }}>Back</button>
-        Submit
-      </button>
+      <span>
+        <Button type="submit" onClick={handleSubmit}>Submit</Button>
+        {' '}
+        <Link to="/">
+          <Button variant="secondary" type="button">Back</Button>
+        </Link>
+      </span>
     </Form>
   );
 }
+
+RegistrationView.propTypes = {
+  register: PropTypes.shape({
+    Username: PropTypes.string.isRequired,
+    Password: PropTypes.string.isRequired,
+    Email: PropTypes.string.isRequired,
+    Birthdate: PropTypes.string.isRequired
+  }),
+};

@@ -2,16 +2,12 @@
   margin: auto;
   background-color: #bbb;
 }
-.LoginForm {
-  margin: auto;
-  max-width: 250px;
-  align-content: center;
-  background-color: #bbb;
-}
+
 .RegistrationForm {
   margin: auto;
   max-width: 250px;
 }
+
 .my-flix {
   color: steelblue;
 }

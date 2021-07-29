@@ -22,27 +22,45 @@ class MainView extends React.Component {
     };
   }
 
-  componentDidMount(){
-    axios.get('https://my-movie-api-20123.herokuapp.com/movies')
-      .then((response) => {
-        this.setState({
-          movies: response.data
-        });
-      })
-      .catch(error => {
-        console.log(error);
+  componentDidMount() {
+    let accessToken = localStorage.getItem('token');
+    if (accessToken !== null) {
+      this.setState({
+        user: localStorage.getItem('user')
       });
+      this.getMovies(accessToken);
+    }
+  }
+
+  onLoggedIn(authData) {
+    console.log(authData);
+    this.setState({
+      user: authData.user.Username
+    });
+  
+    localStorage.setItem('token', authData.token);
+    localStorage.setItem('user', authData.user.Username);
+    this.getMovies(authData.token);
+  }
+
+  getMovies(token){
+    axios.get('https://my-movie-api-20123.herokuapp.com/movies', {
+      header: { Authorization: `Bearer ${token}` }
+    })
+    .then(response => {
+      // Assign the result to the state
+      this.setState({
+        movies: response.data
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
   setSelectedMovie(movie) {
     this.setState({
       selectedMovie: movie,
-    });
-  }
-
-  onLoggedIn(user) {
-    this.setState({
-      user
     });
   }
 
@@ -74,9 +92,7 @@ class MainView extends React.Component {
           : (
             <Row className="justify-content-md-center">
               {movies.map(movie => (
-                <Col md={3}>
-                  <MovieCard key={movie._id} movie={movie} onMovieClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
-                </Col>
+                <MovieCard key={movie._id} movie={movie} onMovieClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
               ))}
             </Row>
           )
