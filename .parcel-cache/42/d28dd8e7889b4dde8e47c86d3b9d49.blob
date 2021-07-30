@@ -23017,7 +23017,7 @@ class MainView extends _reactDefault.default.Component {
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
-            path: "/movies/genres/:name",
+            path: "/genres/:name",
             render: ({ match , history  })=>{
                 if (!user) return(/*#__PURE__*/ _reactDefault.default.createElement(_colDefault.default, null, /*#__PURE__*/ _reactDefault.default.createElement(_loginView.LoginView, {
                     onLoggedIn: (user1)=>this.onLoggedIn(user1)
@@ -24555,15 +24555,7 @@ function LoginView(props) {
             lineNumber: 50
         },
         __self: this
-    }, "Submit"), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
-        variant: "secondary",
-        href: "/register",
-        __source: {
-            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-            lineNumber: 51
-        },
-        __self: this
-    }, "Registration")))));
+    }, "Submit")))));
 }
 _s(LoginView, "F0KNa4WU+CLZaSc0fDS4xoJP4yg=");
 _c = LoginView;
@@ -26893,14 +26885,14 @@ function RegistrationView(props) {
         },
         __self: this
     }, "Submit"), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
-        variant: "link",
-        href: "/",
+        variant: "secondary",
+        type: "button",
         __source: {
             fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
-            lineNumber: 62
+            lineNumber: 64
         },
         __self: this
-    }, "Back to login"))));
+    }, "Back"))));
 }
 _s(RegistrationView, "D0lB37FO5C6TvcokQK9Cc01QTS8=");
 _c = RegistrationView;
@@ -31883,4 +31875,4 @@ exports.default = _default;
 
 },{"react":"3b2NM"}],"JOw5y":[function() {},{}]},["1j6wU","4x6Mp","50ops"], "50ops", "parcelRequire279c")
 
-//# sourceMappingURL=index.bf6c691a.js.map
+//# sourceMappingURL=index.HASH_REF_a039d63b35cdd9534fd71096bf6c691a.js.map

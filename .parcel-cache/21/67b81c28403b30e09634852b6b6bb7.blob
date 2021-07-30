@@ -24555,15 +24555,7 @@ function LoginView(props) {
             lineNumber: 50
         },
         __self: this
-    }, "Submit"), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
-        variant: "secondary",
-        href: "/register",
-        __source: {
-            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
-            lineNumber: 51
-        },
-        __self: this
-    }, "Registration")))));
+    }, "Submit")))));
 }
 _s(LoginView, "F0KNa4WU+CLZaSc0fDS4xoJP4yg=");
 _c = LoginView;
@@ -26897,7 +26889,7 @@ function RegistrationView(props) {
         href: "/",
         __source: {
             fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
-            lineNumber: 62
+            lineNumber: 64
         },
         __self: this
     }, "Back to login"))));
@@ -31883,4 +31875,4 @@ exports.default = _default;
 
 },{"react":"3b2NM"}],"JOw5y":[function() {},{}]},["1j6wU","4x6Mp","50ops"], "50ops", "parcelRequire279c")
 
-//# sourceMappingURL=index.bf6c691a.js.map
+//# sourceMappingURL=index.HASH_REF_a039d63b35cdd9534fd71096bf6c691a.js.map
