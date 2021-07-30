@@ -26713,10 +26713,10 @@ function RegistrationView(props) {
     const [Password, setPassword] = _react.useState('');
     const [Email, setEmail] = _react.useState('');
     const [Birthday, setBirthday] = _react.useState('');
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-        console.log(Username, Password, Email, Birthday);
-    };
+    // const handleSubmit = (e) => {
+    //   e.preventDefault();
+    //   console.log(Username, Password, Email, Birthday);
+    // };
     _axiosDefault.default.post('https://my-movie-api-20123.herokuapp.com/users', {
         Username: Username,
         Password: Password,
@@ -26884,7 +26884,14 @@ function RegistrationView(props) {
             lineNumber: 61
         },
         __self: this
-    }, "Submit"), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+    }, "Submit"), ' ', /*#__PURE__*/ _reactDefault.default.createElement(Link, {
+        to: "/",
+        __source: {
+            fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\registration-view\\registration-view.jsx",
+            lineNumber: 63
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
         variant: "secondary",
         type: "button",
         __source: {
@@ -26892,7 +26899,7 @@ function RegistrationView(props) {
             lineNumber: 64
         },
         __self: this
-    }, "Back"))));
+    }, "Back")))));
 }
 _s(RegistrationView, "D0lB37FO5C6TvcokQK9Cc01QTS8=");
 _c = RegistrationView;
@@ -31875,4 +31882,4 @@ exports.default = _default;
 
 },{"react":"3b2NM"}],"JOw5y":[function() {},{}]},["1j6wU","4x6Mp","50ops"], "50ops", "parcelRequire279c")
 
-//# sourceMappingURL=index.bf6c691a.js.map
+//# sourceMappingURL=index.HASH_REF_a039d63b35cdd9534fd71096bf6c691a.js.map
