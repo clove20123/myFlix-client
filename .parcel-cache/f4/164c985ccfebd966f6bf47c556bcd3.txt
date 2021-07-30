@@ -26,7 +26,7 @@
 89C:\Users\clove\Desktop\myFlix-client\node_modules\react-transition-group\SwitchTransition132714274116767910 1
 75C:\Users\clove\Desktop\myFlix-client\node_modules\react-bootstrap\FormCheck132714274400636377 1
 89C:\Users\clove\Desktop\myFlix-client\node_modules\@popperjs\core\dist\esm\utils\format.js121436361000000000 0
-41C:\Users\clove\Desktop\myFlix-client\dist132721142890858907 1
+41C:\Users\clove\Desktop\myFlix-client\dist132721169223374784 1
 87C:\Users\clove\Desktop\myFlix-client\node_modules\@restart\hooks\cjs\useStableMemo.d.ts121436361000000000 0
 85C:\Users\clove\Desktop\myFlix-client\node_modules\react-bootstrap\esm\TabContext.d.ts121436361000000000 0
 70C:\Users\clove\Desktop\myFlix-client\node_modules\scheduler\tracing.js121436361000000000 0
@@ -39,7 +39,7 @@
 70C:\Users\clove\Desktop\myFlix-client\node_modules\reusify\package.json132707432879691304 0
 81C:\Users\clove\Desktop\myFlix-client\node_modules\dom-helpers\esm\childNodes.d.ts121436361000000000 0
 99C:\Users\clove\Desktop\myFlix-client\node_modules\react-bootstrap\triggerBrowserReflow\package.json121436361000000000 0
-77C:\Users\clove\Desktop\myFlix-client\src\components\movie-view\movie-view.jsx132716889957750123 0
+77C:\Users\clove\Desktop\myFlix-client\src\components\movie-view\movie-view.jsx132721154459720885 0
 85C:\Users\clove\Desktop\myFlix-client\node_modules\@popperjs\core\lib\popper-lite.d.ts121436361000000000 0
 58C:\Users\clove\Desktop\myFlix-client\node_modules\@restart132714274514131375 1
 76C:\Users\clove\Desktop\myFlix-client\node_modules\dom-helpers\cjs\prepend.js121436361000000000 0
@@ -103,7 +103,7 @@
 78C:\Users\clove\Desktop\myFlix-client\node_modules\dom-helpers\css\package.json121436361000000000 0
 81C:\Users\clove\Desktop\myFlix-client\node_modules\react-bootstrap\esm\FormText.js121436361000000000 0
 69C:\Users\clove\Desktop\myFlix-client\src\components\registration-view132720473111140986 1
-91C:\Users\clove\Desktop\myFlix-client\src\components\registration-view\registration-view.jsx132720473111150979 0
+91C:\Users\clove\Desktop\myFlix-client\src\components\registration-view\registration-view.jsx132721169210791972 0
 79C:\Users\clove\Desktop\myFlix-client\node_modules\react-bootstrap\cjs\Tabs.d.ts121436361000000000 0
 94C:\Users\clove\Desktop\myFlix-client\node_modules\resolve-pathname\umd\resolve-pathname.min.js121436361000000000 0
 68C:\Users\clove\Desktop\myFlix-client\node_modules\warning\warning.js121436361000000000 0
@@ -112,7 +112,7 @@
 82C:\Users\clove\Desktop\myFlix-client\node_modules\react-bootstrap\AccordionContext132714274362003046 1
 73C:\Users\clove\Desktop\myFlix-client\node_modules\hoist-non-react-statics132721111330812611 1
 90C:\Users\clove\Desktop\myFlix-client\node_modules\react-bootstrap\cjs\TransitionWrapper.js121436361000000000 0
-77C:\Users\clove\Desktop\myFlix-client\src\components\movie-card\movie-card.jsx132720510130286105 0
+77C:\Users\clove\Desktop\myFlix-client\src\components\movie-card\movie-card.jsx132721150393903972 0
 55C:\Users\clove\Desktop\myFlix-client\node_modules\fastq132707432891014818 1
 86C:\Users\clove\Desktop\myFlix-client\node_modules\react-transition-group\CSSTransition132714274112670258 1
 102C:\Users\clove\Desktop\myFlix-client\node_modules\@babel\runtime\helpers\unsupportedIterableToArray.js121012626000000000 0
@@ -123,7 +123,7 @@
 58C:\Users\clove\Desktop\myFlix-client\node_modules\chokidar132707432891084782 1
 81C:\Users\clove\Desktop\myFlix-client\node_modules\@parcel\plugin\lib\PluginAPI.js121436361000000000 0
 69C:\Users\clove\Desktop\myFlix-client\node_modules\react-dom\README.md121436361000000000 0
-75C:\Users\clove\Desktop\myFlix-client\src\components\main-view\main-view.jsx132721142871090216 0
+75C:\Users\clove\Desktop\myFlix-client\src\components\main-view\main-view.jsx132721167257713229 0
 84C:\Users\clove\Desktop\myFlix-client\node_modules\@restart\hooks\useMap\package.json121436361000000000 0
 102C:\Users\clove\Desktop\myFlix-client\node_modules\react-transition-group\esm\TransitionGroupContext.js121436361000000000 0
 80C:\Users\clove\Desktop\myFlix-client\node_modules\react-overlays\cjs\Portal.d.ts121436361000000000 0
@@ -1118,7 +1118,7 @@
 79C:\Users\clove\Desktop\myFlix-client\node_modules\@nodelib\fs.stat\out\adapters132707432850512909 1
 81C:\Users\clove\Desktop\myFlix-client\node_modules\react-overlays\esm\usePopper.js121436361000000000 0
 72C:\Users\clove\Desktop\myFlix-client\node_modules\react-bootstrap\Navbar132714274406792838 1
-64C:\Users\clove\Desktop\myFlix-client\dist\index.09eed976.css.map132721142883812954 0
+64C:\Users\clove\Desktop\myFlix-client\dist\index.09eed976.css.map132721169219576986 0
 86C:\Users\clove\Desktop\myFlix-client\node_modules\react-overlays\esm\DropdownToggle.js121436361000000000 0
 72C:\Users\clove\Desktop\myFlix-client\node_modules\picomatch\package.json132707432879681309 0
 90C:\Users\clove\Desktop\myFlix-client\node_modules\react-overlays\esm\manageAriaHidden.d.ts121436361000000000 0
@@ -1182,7 +1182,7 @@
 83C:\Users\clove\Desktop\myFlix-client\node_modules\react-overlays\cjs\usePopper.d.ts121436361000000000 0
 86C:\Users\clove\Desktop\myFlix-client\node_modules\react-overlays\cjs\useRootClose.d.ts121436361000000000 0
 88C:\Users\clove\Desktop\myFlix-client\node_modules\react-overlays\cjs\useWaitForDOMRef.js121436361000000000 0
-59C:\Users\clove\Desktop\myFlix-client\dist\index.bf6c691a.js132721142884202740 0
+59C:\Users\clove\Desktop\myFlix-client\dist\index.bf6c691a.js132721169222095535 0
 86C:\Users\clove\Desktop\myFlix-client\node_modules\react-lifecycles-compat\CHANGELOG.md131705230510000000 0
 86C:\Users\clove\Desktop\myFlix-client\node_modules\react-lifecycles-compat\package.json132714274520637593 0
 86C:\Users\clove\Desktop\myFlix-client\node_modules\react-bootstrap\cjs\AccordionItem.js121436361000000000 0
@@ -2746,7 +2746,7 @@
 79C:\Users\clove\Desktop\myFlix-client\node_modules\axios\lib\core\createError.js121436361000000000 0
 83C:\Users\clove\Desktop\myFlix-client\node_modules\axios\lib\core\dispatchRequest.js121436361000000000 0
 86C:\Users\clove\Desktop\myFlix-client\node_modules\axios\lib\core\InterceptorManager.js121436361000000000 0
-63C:\Users\clove\Desktop\myFlix-client\dist\index.bf6c691a.js.map132721142890818958 0
+63C:\Users\clove\Desktop\myFlix-client\dist\index.bf6c691a.js.map132721169223214868 0
 74C:\Users\clove\Desktop\myFlix-client\node_modules\axios\lib\core\README.md121436361000000000 0
 76C:\Users\clove\Desktop\myFlix-client\node_modules\axios\lib\cancel\Cancel.js121436361000000000 0
 76C:\Users\clove\Desktop\myFlix-client\node_modules\axios\lib\adapters\http.js121436361000000000 0
@@ -3255,7 +3255,7 @@
 67C:\Users\clove\Desktop\myFlix-client\node_modules\.bin\loose-envify132707423146841781 0
 71C:\Users\clove\Desktop\myFlix-client\node_modules\.bin\loose-envify.ps1132707423146841781 0
 63C:\Users\clove\Desktop\myFlix-client\node_modules\.bin\sass.cmd132707432895572211 0
-60C:\Users\clove\Desktop\myFlix-client\dist\index.09eed976.css132721142883453148 0
+60C:\Users\clove\Desktop\myFlix-client\dist\index.09eed976.css132721169219457015 0
 60C:\Users\clove\Desktop\myFlix-client\dist\index.7c9bd2cb.css132715120153747912 0
 60C:\Users\clove\Desktop\myFlix-client\dist\index.b3af99cb.css132715121546102192 0
-52C:\Users\clove\Desktop\myFlix-client\dist\index.html132721142882043955 0
+52C:\Users\clove\Desktop\myFlix-client\dist\index.html132721169219447045 0

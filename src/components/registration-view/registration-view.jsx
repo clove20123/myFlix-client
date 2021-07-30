@@ -16,6 +16,21 @@ export function RegistrationView(props) {
     console.log(Username, Password, Email, Birthday);
   };
 
+  axios.post('https://my-movie-api-20123.herokuapp.com/users', {
+    Username: username,
+    Password: password,
+    Email: email,
+    Birthday: birthday
+  })
+  .then(response => {
+    const data = response.data;
+    console.log(data);
+    window.open('/', '_self'); // the second argument '_self' is necessary so that the page will open in the current tab
+  })
+  .catch(e => {
+    console.log('error registering the user')
+  });
+
   return (
     <Form className="RegistrationForm" onSubmit={handleSubmit}>
       <Form.Group controlId="formGroupUsername">
