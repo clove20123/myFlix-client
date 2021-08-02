@@ -23,7 +23,7 @@ export class DirectorView extends React.Component {
         </div>
 
         <div className="director-birthdate">
-          <span className="value">{movie.Director.Birthdate}</span>
+          <span className="value">{movie.Director.Birth}</span>
         </div>
 
         <Button variant="primary" onClick={() => { onBackClick(null); }}>Back</Button>
@@ -37,7 +37,7 @@ DirectorView.propTypes = {
   director: PropTypes.shape({
     name: PropTypes.string.isRequired,
     bio: PropTypes.string.isRequired,
-    birthyear: PropTypes.string.isRequired
+    birth: PropTypes.string.isRequired
   }),
   onBackClick: PropTypes.func.isRequired
 };

@@ -868,6 +868,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _bootstrapMinCss = require("bootstrap/dist/css/bootstrap.min.css");
 var _reactDom = require("react-dom");
 var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
 var _container = require("react-bootstrap/Container");
@@ -882,13 +883,13 @@ class MyFlixApplication extends _reactDefault.default.Component {
         return(/*#__PURE__*/ _reactDefault.default.createElement(_containerDefault.default, {
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\index.jsx",
-                lineNumber: 15
+                lineNumber: 16
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_mainViewDefault.default, {
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\index.jsx",
-                lineNumber: 16
+                lineNumber: 17
             },
             __self: this
         })));
@@ -904,7 +905,7 @@ _reactDomDefault.default.render(/*#__PURE__*/ _reactDefault.default.createElemen
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","react-dom":"2sg1U","react-bootstrap/Container":"3Mt3t","./components/main-view/main-view":"1PF64","./index.scss":"JOw5y","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr"}],"3b2NM":[function(require,module,exports) {
+},{"react":"3b2NM","react-dom":"2sg1U","react-bootstrap/Container":"3Mt3t","./components/main-view/main-view":"1PF64","./index.scss":"JOw5y","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","bootstrap/dist/css/bootstrap.min.css":"3OZ0H"}],"3b2NM":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react.development.js');
 
@@ -22869,8 +22870,6 @@ var _row = require("react-bootstrap/Row");
 var _rowDefault = parcelHelpers.interopDefault(_row);
 var _col = require("react-bootstrap/Col");
 var _colDefault = parcelHelpers.interopDefault(_col);
-var _navBar = require("react-bootstrap/NavBar");
-var _navBarDefault = parcelHelpers.interopDefault(_navBar);
 class MainView extends _reactDefault.default.Component {
     constructor(){
         super();
@@ -23007,8 +23006,8 @@ class MainView extends _reactDefault.default.Component {
                 return(/*#__PURE__*/ _reactDefault.default.createElement(_colDefault.default, {
                     md: 8
                 }, /*#__PURE__*/ _reactDefault.default.createElement(_directorView.DirectorView, {
-                    director: movies.find((m)=>m.Director.Name === match.params.name
-                    ).Director,
+                    movie: movies.find((m)=>m.Director.Name === match.params.name
+                    ),
                     onBackClick: ()=>history.goBack()
                 })));
             },
@@ -23049,7 +23048,7 @@ exports.default = MainView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","axios":"7rA65","./main-view.scss":"27MIz","../login-view/login-view":"jtwvq","../registration-view/registration-view":"37jdh","../movie-card/movie-card":"79ANl","../movie-view/movie-view":"6nU5P","react-bootstrap/Row":"3fzwD","react-bootstrap/Col":"2D0r8","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","react-router-dom":"1PMSK","react-bootstrap/NavBar":"3qLFd","../director-view/director-view":"2KAKg"}],"7rA65":[function(require,module,exports) {
+},{"react":"3b2NM","axios":"7rA65","./main-view.scss":"27MIz","../login-view/login-view":"jtwvq","../registration-view/registration-view":"37jdh","../movie-card/movie-card":"79ANl","../movie-view/movie-view":"6nU5P","react-bootstrap/Row":"3fzwD","react-bootstrap/Col":"2D0r8","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","react-router-dom":"1PMSK","../director-view/director-view":"2KAKg"}],"7rA65":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"4qfhW"}],"4qfhW":[function(require,module,exports) {
@@ -29815,7 +29814,304 @@ class MovieView extends _reactDefault.default.Component {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","prop-types":"4dfy5","react-bootstrap/Col":"2D0r8","react-bootstrap/Button":"1ru0l","react-router-dom":"1PMSK","react-bootstrap/Row":"3fzwD"}],"3qLFd":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","prop-types":"4dfy5","react-bootstrap/Col":"2D0r8","react-bootstrap/Button":"1ru0l","react-router-dom":"1PMSK","react-bootstrap/Row":"3fzwD"}],"2KAKg":[function(require,module,exports) {
+var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "DirectorView", ()=>DirectorView
+);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _reactBootstrap = require("react-bootstrap");
+var _reactRouterDom = require("react-router-dom");
+var _directorViewScss = require("./director-view.scss");
+class DirectorView extends _reactDefault.default.Component {
+    render() {
+        const { movie , onBackClick  } = this.props;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "director-view",
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
+                lineNumber: 14
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "director-name",
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
+                lineNumber: 16
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
+                lineNumber: 17
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "value",
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
+                lineNumber: 18
+            },
+            __self: this
+        }, movie.Director.Name))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "director-bio",
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
+                lineNumber: 21
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "value",
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
+                lineNumber: 22
+            },
+            __self: this
+        }, movie.Director.Bio)), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "director-birthdate",
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
+                lineNumber: 25
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "value",
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
+                lineNumber: 26
+            },
+            __self: this
+        }, movie.Director.Birth)), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Button, {
+            variant: "primary",
+            onClick: ()=>{
+                onBackClick(null);
+            },
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
+                lineNumber: 29
+            },
+            __self: this
+        }, "Back")));
+    }
+}
+DirectorView.propTypes = {
+    director: _propTypesDefault.default.shape({
+        name: _propTypesDefault.default.string.isRequired,
+        bio: _propTypesDefault.default.string.isRequired,
+        birth: _propTypesDefault.default.string.isRequired
+    }),
+    onBackClick: _propTypesDefault.default.func.isRequired
+};
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","prop-types":"4dfy5","react-bootstrap":"4n7hB","react-router-dom":"1PMSK","./director-view.scss":"7KOj3","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr"}],"4n7hB":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports.useAccordionButton = exports.Tooltip = exports.ToggleButtonGroup = exports.ToggleButton = exports.ToastContainer = exports.ToastHeader = exports.ToastBody = exports.Toast = exports.ThemeProvider = exports.Tabs = exports.TabPane = exports.Table = exports.TabContent = exports.TabContainer = exports.Tab = exports.SplitButton = exports.Spinner = exports.SafeAnchor = exports.Row = exports.Ratio = exports.ProgressBar = exports.PopoverBody = exports.PopoverHeader = exports.Popover = exports.Pagination = exports.PageItem = exports.OverlayTrigger = exports.Overlay = exports.OffcanvasBody = exports.OffcanvasTitle = exports.OffcanvasHeader = exports.Offcanvas = exports.NavLink = exports.NavItem = exports.NavDropdown = exports.NavbarBrand = exports.Navbar = exports.Nav = exports.ModalTitle = exports.ModalFooter = exports.ModalDialog = exports.ModalBody = exports.Modal = exports.ListGroupItem = exports.ListGroup = exports.InputGroup = exports.Figure = exports.Image = exports.Container = exports.FormSelect = exports.FormText = exports.FormLabel = exports.FormGroup = exports.FloatingLabel = exports.FormFloating = exports.FormCheck = exports.FormControl = exports.Form = exports.Fade = exports.DropdownButton = exports.Dropdown = exports.Collapse = exports.Col = exports.CloseButton = exports.CarouselItem = exports.Carousel = exports.CardGroup = exports.CardImg = exports.CardColumns = exports.Card = exports.ButtonToolbar = exports.ButtonGroup = exports.Button = exports.BreadcrumbItem = exports.Breadcrumb = exports.Badge = exports.Alert = exports.AccordionButton = exports.AccordionCollapse = exports.AccordionContext = exports.Accordion = void 0;
+var _Accordion = _interopRequireDefault(require("./Accordion"));
+exports.Accordion = _Accordion.default;
+var _AccordionContext = _interopRequireDefault(require("./AccordionContext"));
+exports.AccordionContext = _AccordionContext.default;
+var _AccordionCollapse = _interopRequireDefault(require("./AccordionCollapse"));
+exports.AccordionCollapse = _AccordionCollapse.default;
+var _AccordionButton = _interopRequireWildcard(require("./AccordionButton"));
+exports.AccordionButton = _AccordionButton.default;
+exports.useAccordionButton = _AccordionButton.useAccordionButton;
+var _Alert = _interopRequireDefault(require("./Alert"));
+exports.Alert = _Alert.default;
+var _Badge = _interopRequireDefault(require("./Badge"));
+exports.Badge = _Badge.default;
+var _Breadcrumb = _interopRequireDefault(require("./Breadcrumb"));
+exports.Breadcrumb = _Breadcrumb.default;
+var _BreadcrumbItem = _interopRequireDefault(require("./BreadcrumbItem"));
+exports.BreadcrumbItem = _BreadcrumbItem.default;
+var _Button = _interopRequireDefault(require("./Button"));
+exports.Button = _Button.default;
+var _ButtonGroup = _interopRequireDefault(require("./ButtonGroup"));
+exports.ButtonGroup = _ButtonGroup.default;
+var _ButtonToolbar = _interopRequireDefault(require("./ButtonToolbar"));
+exports.ButtonToolbar = _ButtonToolbar.default;
+var _Card = _interopRequireDefault(require("./Card"));
+exports.Card = _Card.default;
+var _CardColumns = _interopRequireDefault(require("./CardColumns"));
+exports.CardColumns = _CardColumns.default;
+var _CardImg = _interopRequireDefault(require("./CardImg"));
+exports.CardImg = _CardImg.default;
+var _CardGroup = _interopRequireDefault(require("./CardGroup"));
+exports.CardGroup = _CardGroup.default;
+var _Carousel = _interopRequireDefault(require("./Carousel"));
+exports.Carousel = _Carousel.default;
+var _CarouselItem = _interopRequireDefault(require("./CarouselItem"));
+exports.CarouselItem = _CarouselItem.default;
+var _CloseButton = _interopRequireDefault(require("./CloseButton"));
+exports.CloseButton = _CloseButton.default;
+var _Col = _interopRequireDefault(require("./Col"));
+exports.Col = _Col.default;
+var _Collapse = _interopRequireDefault(require("./Collapse"));
+exports.Collapse = _Collapse.default;
+var _Dropdown = _interopRequireDefault(require("./Dropdown"));
+exports.Dropdown = _Dropdown.default;
+var _DropdownButton = _interopRequireDefault(require("./DropdownButton"));
+exports.DropdownButton = _DropdownButton.default;
+var _Fade = _interopRequireDefault(require("./Fade"));
+exports.Fade = _Fade.default;
+var _Form = _interopRequireDefault(require("./Form"));
+exports.Form = _Form.default;
+var _FormControl = _interopRequireDefault(require("./FormControl"));
+exports.FormControl = _FormControl.default;
+var _FormCheck = _interopRequireDefault(require("./FormCheck"));
+exports.FormCheck = _FormCheck.default;
+var _FormFloating = _interopRequireDefault(require("./FormFloating"));
+exports.FormFloating = _FormFloating.default;
+var _FloatingLabel = _interopRequireDefault(require("./FloatingLabel"));
+exports.FloatingLabel = _FloatingLabel.default;
+var _FormGroup = _interopRequireDefault(require("./FormGroup"));
+exports.FormGroup = _FormGroup.default;
+var _FormLabel = _interopRequireDefault(require("./FormLabel"));
+exports.FormLabel = _FormLabel.default;
+var _FormText = _interopRequireDefault(require("./FormText"));
+exports.FormText = _FormText.default;
+var _FormSelect = _interopRequireDefault(require("./FormSelect"));
+exports.FormSelect = _FormSelect.default;
+var _Container = _interopRequireDefault(require("./Container"));
+exports.Container = _Container.default;
+var _Image = _interopRequireDefault(require("./Image"));
+exports.Image = _Image.default;
+var _Figure = _interopRequireDefault(require("./Figure"));
+exports.Figure = _Figure.default;
+var _InputGroup = _interopRequireDefault(require("./InputGroup"));
+exports.InputGroup = _InputGroup.default;
+var _ListGroup = _interopRequireDefault(require("./ListGroup"));
+exports.ListGroup = _ListGroup.default;
+var _ListGroupItem = _interopRequireDefault(require("./ListGroupItem"));
+exports.ListGroupItem = _ListGroupItem.default;
+var _Modal = _interopRequireDefault(require("./Modal"));
+exports.Modal = _Modal.default;
+var _ModalBody = _interopRequireDefault(require("./ModalBody"));
+exports.ModalBody = _ModalBody.default;
+var _ModalDialog = _interopRequireDefault(require("./ModalDialog"));
+exports.ModalDialog = _ModalDialog.default;
+var _ModalFooter = _interopRequireDefault(require("./ModalFooter"));
+exports.ModalFooter = _ModalFooter.default;
+var _ModalTitle = _interopRequireDefault(require("./ModalTitle"));
+exports.ModalTitle = _ModalTitle.default;
+var _Nav = _interopRequireDefault(require("./Nav"));
+exports.Nav = _Nav.default;
+var _Navbar = _interopRequireDefault(require("./Navbar"));
+exports.Navbar = _Navbar.default;
+var _NavbarBrand = _interopRequireDefault(require("./NavbarBrand"));
+exports.NavbarBrand = _NavbarBrand.default;
+var _NavDropdown = _interopRequireDefault(require("./NavDropdown"));
+exports.NavDropdown = _NavDropdown.default;
+var _NavItem = _interopRequireDefault(require("./NavItem"));
+exports.NavItem = _NavItem.default;
+var _NavLink = _interopRequireDefault(require("./NavLink"));
+exports.NavLink = _NavLink.default;
+var _Offcanvas = _interopRequireDefault(require("./Offcanvas"));
+exports.Offcanvas = _Offcanvas.default;
+var _OffcanvasHeader = _interopRequireDefault(require("./OffcanvasHeader"));
+exports.OffcanvasHeader = _OffcanvasHeader.default;
+var _OffcanvasTitle = _interopRequireDefault(require("./OffcanvasTitle"));
+exports.OffcanvasTitle = _OffcanvasTitle.default;
+var _OffcanvasBody = _interopRequireDefault(require("./OffcanvasBody"));
+exports.OffcanvasBody = _OffcanvasBody.default;
+var _Overlay = _interopRequireDefault(require("./Overlay"));
+exports.Overlay = _Overlay.default;
+var _OverlayTrigger = _interopRequireDefault(require("./OverlayTrigger"));
+exports.OverlayTrigger = _OverlayTrigger.default;
+var _PageItem = _interopRequireDefault(require("./PageItem"));
+exports.PageItem = _PageItem.default;
+var _Pagination = _interopRequireDefault(require("./Pagination"));
+exports.Pagination = _Pagination.default;
+var _Popover = _interopRequireDefault(require("./Popover"));
+exports.Popover = _Popover.default;
+var _PopoverHeader = _interopRequireDefault(require("./PopoverHeader"));
+exports.PopoverHeader = _PopoverHeader.default;
+var _PopoverBody = _interopRequireDefault(require("./PopoverBody"));
+exports.PopoverBody = _PopoverBody.default;
+var _ProgressBar = _interopRequireDefault(require("./ProgressBar"));
+exports.ProgressBar = _ProgressBar.default;
+var _Ratio = _interopRequireDefault(require("./Ratio"));
+exports.Ratio = _Ratio.default;
+var _Row = _interopRequireDefault(require("./Row"));
+exports.Row = _Row.default;
+var _SafeAnchor = _interopRequireDefault(require("./SafeAnchor"));
+exports.SafeAnchor = _SafeAnchor.default;
+var _Spinner = _interopRequireDefault(require("./Spinner"));
+exports.Spinner = _Spinner.default;
+var _SplitButton = _interopRequireDefault(require("./SplitButton"));
+exports.SplitButton = _SplitButton.default;
+var _Tab = _interopRequireDefault(require("./Tab"));
+exports.Tab = _Tab.default;
+var _TabContainer = _interopRequireDefault(require("./TabContainer"));
+exports.TabContainer = _TabContainer.default;
+var _TabContent = _interopRequireDefault(require("./TabContent"));
+exports.TabContent = _TabContent.default;
+var _Table = _interopRequireDefault(require("./Table"));
+exports.Table = _Table.default;
+var _TabPane = _interopRequireDefault(require("./TabPane"));
+exports.TabPane = _TabPane.default;
+var _Tabs = _interopRequireDefault(require("./Tabs"));
+exports.Tabs = _Tabs.default;
+var _ThemeProvider = _interopRequireDefault(require("./ThemeProvider"));
+exports.ThemeProvider = _ThemeProvider.default;
+var _Toast = _interopRequireDefault(require("./Toast"));
+exports.Toast = _Toast.default;
+var _ToastBody = _interopRequireDefault(require("./ToastBody"));
+exports.ToastBody = _ToastBody.default;
+var _ToastHeader = _interopRequireDefault(require("./ToastHeader"));
+exports.ToastHeader = _ToastHeader.default;
+var _ToastContainer = _interopRequireDefault(require("./ToastContainer"));
+exports.ToastContainer = _ToastContainer.default;
+var _ToggleButton = _interopRequireDefault(require("./ToggleButton"));
+exports.ToggleButton = _ToggleButton.default;
+var _ToggleButtonGroup = _interopRequireDefault(require("./ToggleButtonGroup"));
+exports.ToggleButtonGroup = _ToggleButtonGroup.default;
+var _Tooltip = _interopRequireDefault(require("./Tooltip"));
+exports.Tooltip = _Tooltip.default;
+function _getRequireWildcardCache(nodeInterop) {
+    if (typeof WeakMap !== "function") return null;
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+    return (_getRequireWildcardCache = function(nodeInterop1) {
+        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop);
+}
+function _interopRequireWildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) return obj;
+    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
+        default: obj
+    };
+    var cache = _getRequireWildcardCache(nodeInterop);
+    if (cache && cache.has(obj)) return cache.get(obj);
+    var newObj = {
+    };
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+        else newObj[key] = obj[key];
+    }
+    newObj.default = obj;
+    if (cache) cache.set(obj, newObj);
+    return newObj;
+}
+
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","./Accordion":"123ZC","./AccordionContext":"6cHdE","./AccordionCollapse":"6fr2G","./AccordionButton":"4QI10","./Alert":"1oIYX","./Badge":"2aFSj","./Breadcrumb":"hcZkb","./BreadcrumbItem":"fGRyA","./Button":"1ru0l","./ButtonGroup":"2THBw","./ButtonToolbar":"5QGeS","./Card":"1CZWQ","./CardColumns":"48yv5","./CardImg":"68LPL","./CardGroup":"1B9U7","./Carousel":"2Zcjk","./CarouselItem":"2tnC3","./CloseButton":"yWShL","./Col":"2D0r8","./Collapse":"4hhe0","./Dropdown":"27PdI","./DropdownButton":"7vE8v","./Fade":"2CU5C","./Form":"6A5ko","./FormControl":"573gP","./FormCheck":"6WcKM","./FormFloating":"6rS17","./FloatingLabel":"7brY9","./FormGroup":"120iJ","./FormLabel":"70qP9","./FormText":"2VsfR","./FormSelect":"4b2j3","./Container":"3Mt3t","./Image":"5qrP5","./Figure":"2ZDTl","./InputGroup":"3nb5C","./ListGroup":"6fErm","./ListGroupItem":"4tfxm","./Modal":"20uUD","./ModalBody":"5Zu6o","./ModalDialog":"4OqPY","./ModalFooter":"4rYLN","./ModalTitle":"MJz12","./Nav":"3T3v1","./Navbar":"3qLFd","./NavbarBrand":"4flFi","./NavDropdown":"1qmIy","./NavItem":"39J70","./NavLink":"6stbu","./Offcanvas":"6FzOX","./OffcanvasHeader":"6nkPu","./OffcanvasTitle":"5ma32","./OffcanvasBody":"46UQD","./Overlay":"5PcTh","./OverlayTrigger":"4VaCP","./PageItem":"6IcgF","./Pagination":"3XBVG","./Popover":"4O1Nl","./PopoverHeader":"hz4Ka","./PopoverBody":"5Vd86","./ProgressBar":"4HfN1","./Ratio":"2aW27","./Row":"3fzwD","./SafeAnchor":"5VP5o","./Spinner":"4fhZt","./SplitButton":"qFVWq","./Tab":"2o9hU","./TabContainer":"31im4","./TabContent":"4a1d3","./Table":"34yor","./TabPane":"42ci1","./Tabs":"6YwyY","./ThemeProvider":"4rz1S","./Toast":"o9l9n","./ToastBody":"4qMwS","./ToastHeader":"3bTJs","./ToastContainer":"ESs7C","./ToggleButton":"1noIF","./ToggleButtonGroup":"LW99s","./Tooltip":"2YAjd"}],"123ZC":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -29823,13 +30119,13 @@ exports.default = void 0;
 var _classnames = _interopRequireDefault(require("classnames"));
 var React = _interopRequireWildcard(require("react"));
 var _uncontrollable = require("uncontrollable");
-var _createWithBsPrefix = _interopRequireDefault(require("./createWithBsPrefix"));
-var _NavbarBrand = _interopRequireDefault(require("./NavbarBrand"));
-var _NavbarCollapse = _interopRequireDefault(require("./NavbarCollapse"));
-var _NavbarToggle = _interopRequireDefault(require("./NavbarToggle"));
 var _ThemeProvider = require("./ThemeProvider");
-var _NavbarContext = _interopRequireDefault(require("./NavbarContext"));
-var _SelectableContext = _interopRequireDefault(require("./SelectableContext"));
+var _AccordionBody = _interopRequireDefault(require("./AccordionBody"));
+var _AccordionButton = _interopRequireDefault(require("./AccordionButton"));
+var _AccordionCollapse = _interopRequireDefault(require("./AccordionCollapse"));
+var _AccordionContext = _interopRequireDefault(require("./AccordionContext"));
+var _AccordionHeader = _interopRequireDefault(require("./AccordionHeader"));
+var _AccordionItem = _interopRequireDefault(require("./AccordionItem"));
 var _jsxRuntime = require("react/jsx-runtime");
 function _getRequireWildcardCache(nodeInterop) {
     if (typeof WeakMap !== "function") return null;
@@ -29858,69 +30154,41 @@ function _interopRequireWildcard(obj, nodeInterop) {
     if (cache) cache.set(obj, newObj);
     return newObj;
 }
-const NavbarText = _createWithBsPrefix.default('navbar-text', {
-    Component: 'span'
-});
-const defaultProps = {
-    expand: true,
-    variant: 'light',
-    collapseOnSelect: false
-};
-const Navbar = /*#__PURE__*/ React.forwardRef((props, ref)=>{
-    const { bsPrefix: initialBsPrefix , expand , variant , bg , fixed , sticky , className , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-    as: Component = 'nav' , expanded , onToggle , onSelect , collapseOnSelect , ...controlledProps } = _uncontrollable.useUncontrolled(props, {
-        expanded: 'onToggle'
+const Accordion = /*#__PURE__*/ React.forwardRef((props, ref)=>{
+    const { // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+    as: Component = 'div' , activeKey , bsPrefix , className , onSelect , flush , ...controlledProps } = _uncontrollable.useUncontrolled(props, {
+        activeKey: 'onSelect'
     });
-    const bsPrefix = _ThemeProvider.useBootstrapPrefix(initialBsPrefix, 'navbar');
-    const handleCollapse = React.useCallback((...args)=>{
-        onSelect == null || onSelect(...args);
-        if (collapseOnSelect && expanded) onToggle == null || onToggle(false);
-    }, [
-        onSelect,
-        collapseOnSelect,
-        expanded,
-        onToggle
-    ]); // will result in some false positives but that seems better
-    // than false negatives. strict `undefined` check allows explicit
-    // "nulling" of the role if the user really doesn't want one
-    if (controlledProps.role === undefined && Component !== 'nav') controlledProps.role = 'navigation';
-    let expandClass = `${bsPrefix}-expand`;
-    if (typeof expand === 'string') expandClass = `${expandClass}-${expand}`;
-    const navbarContext = React.useMemo(()=>({
-            onToggle: ()=>onToggle == null ? void 0 : onToggle(!expanded)
-            ,
-            bsPrefix,
-            expanded: !!expanded
+    const prefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'accordion');
+    const contextValue = React.useMemo(()=>({
+            activeEventKey: activeKey,
+            onSelect
         })
     , [
-        bsPrefix,
-        expanded,
-        onToggle
+        activeKey,
+        onSelect
     ]);
-    return(/*#__PURE__*/ _jsxRuntime.jsx(_NavbarContext.default.Provider, {
-        value: navbarContext,
-        children: /*#__PURE__*/ _jsxRuntime.jsx(_SelectableContext.default.Provider, {
-            value: handleCollapse,
-            children: /*#__PURE__*/ _jsxRuntime.jsx(Component, {
-                ref: ref,
-                ...controlledProps,
-                className: _classnames.default(className, bsPrefix, expand && expandClass, variant && `${bsPrefix}-${variant}`, bg && `bg-${bg}`, sticky && `sticky-${sticky}`, fixed && `fixed-${fixed}`)
-            })
+    return(/*#__PURE__*/ _jsxRuntime.jsx(_AccordionContext.default.Provider, {
+        value: contextValue,
+        children: /*#__PURE__*/ _jsxRuntime.jsx(Component, {
+            ref: ref,
+            ...controlledProps,
+            className: _classnames.default(className, prefix, flush && `${prefix}-flush`)
         })
     }));
 });
-Navbar.defaultProps = defaultProps;
-Navbar.displayName = 'Navbar';
-var _default = Object.assign(Navbar, {
-    Brand: _NavbarBrand.default,
-    Toggle: _NavbarToggle.default,
-    Collapse: _NavbarCollapse.default,
-    Text: NavbarText
+Accordion.displayName = 'Accordion';
+var _default = Object.assign(Accordion, {
+    Button: _AccordionButton.default,
+    Collapse: _AccordionCollapse.default,
+    Item: _AccordionItem.default,
+    Header: _AccordionHeader.default,
+    Body: _AccordionBody.default
 });
 exports.default = _default;
 module.exports = exports.default;
 
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","uncontrollable":"4P7FS","./createWithBsPrefix":"2oVVc","./NavbarBrand":"4flFi","./NavbarCollapse":"6KfIh","./NavbarToggle":"4uQiD","./ThemeProvider":"4rz1S","./NavbarContext":"1Ts0D","./SelectableContext":"3ATFf","react/jsx-runtime":"7jBZW"}],"4P7FS":[function(require,module,exports) {
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","uncontrollable":"4P7FS","./ThemeProvider":"4rz1S","./AccordionBody":"jQhi5","./AccordionButton":"4QI10","./AccordionCollapse":"6fr2G","./AccordionContext":"6cHdE","./AccordionHeader":"6C8me","./AccordionItem":"RhMSn","react/jsx-runtime":"7jBZW"}],"4P7FS":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
@@ -30415,7 +30683,7 @@ function polyfill(Component) {
 }
 exports.polyfill = polyfill;
 
-},{}],"4flFi":[function(require,module,exports) {
+},{}],"jQhi5":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -30423,6 +30691,8 @@ exports.default = void 0;
 var _classnames = _interopRequireDefault(require("classnames"));
 var React = _interopRequireWildcard(require("react"));
 var _ThemeProvider = require("./ThemeProvider");
+var _AccordionCollapse = _interopRequireDefault(require("./AccordionCollapse"));
+var _AccordionItemContext = _interopRequireDefault(require("./AccordionItemContext"));
 var _jsxRuntime = require("react/jsx-runtime");
 function _getRequireWildcardCache(nodeInterop) {
     if (typeof WeakMap !== "function") return null;
@@ -30451,29 +30721,34 @@ function _interopRequireWildcard(obj, nodeInterop) {
     if (cache) cache.set(obj, newObj);
     return newObj;
 }
-const NavbarBrand = /*#__PURE__*/ React.forwardRef(({ bsPrefix , className , as , ...props }, ref)=>{
-    bsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'navbar-brand');
-    const Component = as || (props.href ? 'a' : 'span');
-    return(/*#__PURE__*/ _jsxRuntime.jsx(Component, {
-        ...props,
-        ref: ref,
-        className: _classnames.default(className, bsPrefix)
+const AccordionBody = /*#__PURE__*/ React.forwardRef(({ // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = 'div' , bsPrefix , className , ...props }, ref)=>{
+    bsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'accordion-body');
+    const { eventKey  } = React.useContext(_AccordionItemContext.default);
+    return(/*#__PURE__*/ _jsxRuntime.jsx(_AccordionCollapse.default, {
+        eventKey: eventKey,
+        children: /*#__PURE__*/ _jsxRuntime.jsx(Component, {
+            ref: ref,
+            ...props,
+            className: _classnames.default(className, bsPrefix)
+        })
     }));
 });
-NavbarBrand.displayName = 'NavbarBrand';
-var _default = NavbarBrand;
+AccordionBody.displayName = 'AccordionBody';
+var _default = AccordionBody;
 exports.default = _default;
 module.exports = exports.default;
 
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S","react/jsx-runtime":"7jBZW"}],"6KfIh":[function(require,module,exports) {
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S","./AccordionCollapse":"6fr2G","./AccordionItemContext":"1xzxZ","react/jsx-runtime":"7jBZW"}],"6fr2G":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
 exports.default = void 0;
+var _classnames = _interopRequireDefault(require("classnames"));
 var React = _interopRequireWildcard(require("react"));
-var _Collapse = _interopRequireDefault(require("./Collapse"));
 var _ThemeProvider = require("./ThemeProvider");
-var _NavbarContext = _interopRequireDefault(require("./NavbarContext"));
+var _Collapse = _interopRequireDefault(require("./Collapse"));
+var _AccordionContext = _interopRequireDefault(require("./AccordionContext"));
 var _jsxRuntime = require("react/jsx-runtime");
 function _getRequireWildcardCache(nodeInterop) {
     if (typeof WeakMap !== "function") return null;
@@ -30502,25 +30777,25 @@ function _interopRequireWildcard(obj, nodeInterop) {
     if (cache) cache.set(obj, newObj);
     return newObj;
 }
-const NavbarCollapse = /*#__PURE__*/ React.forwardRef(({ children , bsPrefix , ...props }, ref)=>{
-    bsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'navbar-collapse');
-    const context = React.useContext(_NavbarContext.default);
+const AccordionCollapse = /*#__PURE__*/ React.forwardRef(({ bsPrefix , className , children , eventKey , ...props }, ref)=>{
+    const { activeEventKey  } = React.useContext(_AccordionContext.default);
+    bsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'accordion-collapse');
     return(/*#__PURE__*/ _jsxRuntime.jsx(_Collapse.default, {
-        in: !!(context && context.expanded),
+        ref: ref,
+        in: activeEventKey === eventKey,
         ...props,
+        className: _classnames.default(className, bsPrefix),
         children: /*#__PURE__*/ _jsxRuntime.jsx("div", {
-            ref: ref,
-            className: bsPrefix,
-            children: children
+            children: React.Children.only(children)
         })
     }));
 });
-NavbarCollapse.displayName = 'NavbarCollapse';
-var _default = NavbarCollapse;
+AccordionCollapse.displayName = 'AccordionCollapse';
+var _default = AccordionCollapse;
 exports.default = _default;
 module.exports = exports.default;
 
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","react":"3b2NM","./Collapse":"4hhe0","./ThemeProvider":"4rz1S","./NavbarContext":"1Ts0D","react/jsx-runtime":"7jBZW"}],"4hhe0":[function(require,module,exports) {
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S","./Collapse":"4hhe0","./AccordionContext":"6cHdE","react/jsx-runtime":"7jBZW"}],"4hhe0":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -31690,685 +31965,7 @@ function mergeRefs(refA, refB) {
 var _default = useMergedRefs;
 exports.default = _default;
 
-},{"react":"3b2NM"}],"1Ts0D":[function(require,module,exports) {
-"use strict";
-exports.__esModule = true;
-exports.default = void 0;
-var React = _interopRequireWildcard(require("react"));
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function(nodeInterop1) {
-        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
-        default: obj
-    };
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) return cache.get(obj);
-    var newObj = {
-    };
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-        else newObj[key] = obj[key];
-    }
-    newObj.default = obj;
-    if (cache) cache.set(obj, newObj);
-    return newObj;
-}
-const context = /*#__PURE__*/ React.createContext(null);
-context.displayName = 'NavbarContext';
-var _default = context;
-exports.default = _default;
-module.exports = exports.default;
-
-},{"react":"3b2NM"}],"4uQiD":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.default = void 0;
-var _classnames = _interopRequireDefault(require("classnames"));
-var React = _interopRequireWildcard(require("react"));
-var _useEventCallback = _interopRequireDefault(require("@restart/hooks/useEventCallback"));
-var _ThemeProvider = require("./ThemeProvider");
-var _NavbarContext = _interopRequireDefault(require("./NavbarContext"));
-var _jsxRuntime = require("react/jsx-runtime");
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function(nodeInterop1) {
-        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
-        default: obj
-    };
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) return cache.get(obj);
-    var newObj = {
-    };
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-        else newObj[key] = obj[key];
-    }
-    newObj.default = obj;
-    if (cache) cache.set(obj, newObj);
-    return newObj;
-}
-const defaultProps = {
-    label: 'Toggle navigation'
-};
-const NavbarToggle = /*#__PURE__*/ React.forwardRef(({ bsPrefix , className , children , label , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = 'button' , onClick , ...props }, ref)=>{
-    bsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'navbar-toggler');
-    const { onToggle , expanded  } = React.useContext(_NavbarContext.default) || {
-    };
-    const handleClick = _useEventCallback.default((e)=>{
-        if (onClick) onClick(e);
-        if (onToggle) onToggle();
-    });
-    if (Component === 'button') props.type = 'button';
-    return(/*#__PURE__*/ _jsxRuntime.jsx(Component, {
-        ...props,
-        ref: ref,
-        onClick: handleClick,
-        "aria-label": label,
-        className: _classnames.default(className, bsPrefix, !expanded && 'collapsed'),
-        children: children || /*#__PURE__*/ _jsxRuntime.jsx("span", {
-            className: `${bsPrefix}-icon`
-        })
-    }));
-});
-NavbarToggle.displayName = 'NavbarToggle';
-NavbarToggle.defaultProps = defaultProps;
-var _default = NavbarToggle;
-exports.default = _default;
-module.exports = exports.default;
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","@restart/hooks/useEventCallback":"3v8B9","./ThemeProvider":"4rz1S","./NavbarContext":"1Ts0D","react/jsx-runtime":"7jBZW"}],"3v8B9":[function(require,module,exports) {
-"use strict";
-exports.__esModule = true;
-exports.default = useEventCallback;
-var _react = require("react");
-var _useCommittedRef = _interopRequireDefault(require("./useCommittedRef"));
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-        default: obj
-    };
-}
-function useEventCallback(fn) {
-    var ref = _useCommittedRef.default(fn);
-    return _react.useCallback(function() {
-        return ref.current && ref.current.apply(ref, arguments);
-    }, [
-        ref
-    ]);
-}
-
-},{"react":"3b2NM","./useCommittedRef":"4xIdB"}],"4xIdB":[function(require,module,exports) {
-"use strict";
-exports.__esModule = true;
-exports.default = void 0;
-var _react = require("react");
-/**
- * Creates a `Ref` whose value is updated in an effect, ensuring the most recent
- * value is the one rendered with. Generally only required for Concurrent mode usage
- * where previous work in `render()` may be discarded befor being used.
- *
- * This is safe to access in an event handler.
- *
- * @param value The `Ref` value
- */ function useCommittedRef(value) {
-    var ref = _react.useRef(value);
-    _react.useEffect(function() {
-        ref.current = value;
-    }, [
-        value
-    ]);
-    return ref;
-}
-var _default = useCommittedRef;
-exports.default = _default;
-
-},{"react":"3b2NM"}],"3ATFf":[function(require,module,exports) {
-"use strict";
-exports.__esModule = true;
-exports.default = exports.makeEventKey = void 0;
-var React = _interopRequireWildcard(require("react"));
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function(nodeInterop1) {
-        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
-        default: obj
-    };
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) return cache.get(obj);
-    var newObj = {
-    };
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-        else newObj[key] = obj[key];
-    }
-    newObj.default = obj;
-    if (cache) cache.set(obj, newObj);
-    return newObj;
-}
-const SelectableContext = /*#__PURE__*/ React.createContext(null);
-const makeEventKey = (eventKey, href = null)=>{
-    if (eventKey != null) return String(eventKey);
-    return href || null;
-};
-exports.makeEventKey = makeEventKey;
-var _default = SelectableContext;
-exports.default = _default;
-
-},{"react":"3b2NM"}],"2KAKg":[function(require,module,exports) {
-var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "DirectorView", ()=>DirectorView
-);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _reactBootstrap = require("react-bootstrap");
-var _reactRouterDom = require("react-router-dom");
-var _directorViewScss = require("./director-view.scss");
-class DirectorView extends _reactDefault.default.Component {
-    render() {
-        const { movie , onBackClick  } = this.props;
-        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "director-view",
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
-                lineNumber: 14
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "director-name",
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
-                lineNumber: 16
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("h1", {
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
-                lineNumber: 17
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
-            className: "value",
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
-                lineNumber: 18
-            },
-            __self: this
-        }, movie.Director.Name))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "director-bio",
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
-                lineNumber: 21
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
-            className: "value",
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
-                lineNumber: 22
-            },
-            __self: this
-        }, movie.Director.Bio)), /*#__PURE__*/ _reactDefault.default.createElement("div", {
-            className: "director-birthdate",
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
-                lineNumber: 25
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
-            className: "value",
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
-                lineNumber: 26
-            },
-            __self: this
-        }, movie.Director.Birthdate)), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Button, {
-            variant: "primary",
-            onClick: ()=>{
-                onBackClick(null);
-            },
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\director-view\\director-view.jsx",
-                lineNumber: 29
-            },
-            __self: this
-        }, "Back")));
-    }
-}
-DirectorView.propTypes = {
-    director: _propTypesDefault.default.shape({
-        name: _propTypesDefault.default.string.isRequired,
-        bio: _propTypesDefault.default.string.isRequired,
-        birthyear: _propTypesDefault.default.string.isRequired
-    }),
-    onBackClick: _propTypesDefault.default.func.isRequired
-};
-
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"3b2NM","prop-types":"4dfy5","react-bootstrap":"4n7hB","react-router-dom":"1PMSK","./director-view.scss":"7KOj3","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr"}],"4n7hB":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.useAccordionButton = exports.Tooltip = exports.ToggleButtonGroup = exports.ToggleButton = exports.ToastContainer = exports.ToastHeader = exports.ToastBody = exports.Toast = exports.ThemeProvider = exports.Tabs = exports.TabPane = exports.Table = exports.TabContent = exports.TabContainer = exports.Tab = exports.SplitButton = exports.Spinner = exports.SafeAnchor = exports.Row = exports.Ratio = exports.ProgressBar = exports.PopoverBody = exports.PopoverHeader = exports.Popover = exports.Pagination = exports.PageItem = exports.OverlayTrigger = exports.Overlay = exports.OffcanvasBody = exports.OffcanvasTitle = exports.OffcanvasHeader = exports.Offcanvas = exports.NavLink = exports.NavItem = exports.NavDropdown = exports.NavbarBrand = exports.Navbar = exports.Nav = exports.ModalTitle = exports.ModalFooter = exports.ModalDialog = exports.ModalBody = exports.Modal = exports.ListGroupItem = exports.ListGroup = exports.InputGroup = exports.Figure = exports.Image = exports.Container = exports.FormSelect = exports.FormText = exports.FormLabel = exports.FormGroup = exports.FloatingLabel = exports.FormFloating = exports.FormCheck = exports.FormControl = exports.Form = exports.Fade = exports.DropdownButton = exports.Dropdown = exports.Collapse = exports.Col = exports.CloseButton = exports.CarouselItem = exports.Carousel = exports.CardGroup = exports.CardImg = exports.CardColumns = exports.Card = exports.ButtonToolbar = exports.ButtonGroup = exports.Button = exports.BreadcrumbItem = exports.Breadcrumb = exports.Badge = exports.Alert = exports.AccordionButton = exports.AccordionCollapse = exports.AccordionContext = exports.Accordion = void 0;
-var _Accordion = _interopRequireDefault(require("./Accordion"));
-exports.Accordion = _Accordion.default;
-var _AccordionContext = _interopRequireDefault(require("./AccordionContext"));
-exports.AccordionContext = _AccordionContext.default;
-var _AccordionCollapse = _interopRequireDefault(require("./AccordionCollapse"));
-exports.AccordionCollapse = _AccordionCollapse.default;
-var _AccordionButton = _interopRequireWildcard(require("./AccordionButton"));
-exports.AccordionButton = _AccordionButton.default;
-exports.useAccordionButton = _AccordionButton.useAccordionButton;
-var _Alert = _interopRequireDefault(require("./Alert"));
-exports.Alert = _Alert.default;
-var _Badge = _interopRequireDefault(require("./Badge"));
-exports.Badge = _Badge.default;
-var _Breadcrumb = _interopRequireDefault(require("./Breadcrumb"));
-exports.Breadcrumb = _Breadcrumb.default;
-var _BreadcrumbItem = _interopRequireDefault(require("./BreadcrumbItem"));
-exports.BreadcrumbItem = _BreadcrumbItem.default;
-var _Button = _interopRequireDefault(require("./Button"));
-exports.Button = _Button.default;
-var _ButtonGroup = _interopRequireDefault(require("./ButtonGroup"));
-exports.ButtonGroup = _ButtonGroup.default;
-var _ButtonToolbar = _interopRequireDefault(require("./ButtonToolbar"));
-exports.ButtonToolbar = _ButtonToolbar.default;
-var _Card = _interopRequireDefault(require("./Card"));
-exports.Card = _Card.default;
-var _CardColumns = _interopRequireDefault(require("./CardColumns"));
-exports.CardColumns = _CardColumns.default;
-var _CardImg = _interopRequireDefault(require("./CardImg"));
-exports.CardImg = _CardImg.default;
-var _CardGroup = _interopRequireDefault(require("./CardGroup"));
-exports.CardGroup = _CardGroup.default;
-var _Carousel = _interopRequireDefault(require("./Carousel"));
-exports.Carousel = _Carousel.default;
-var _CarouselItem = _interopRequireDefault(require("./CarouselItem"));
-exports.CarouselItem = _CarouselItem.default;
-var _CloseButton = _interopRequireDefault(require("./CloseButton"));
-exports.CloseButton = _CloseButton.default;
-var _Col = _interopRequireDefault(require("./Col"));
-exports.Col = _Col.default;
-var _Collapse = _interopRequireDefault(require("./Collapse"));
-exports.Collapse = _Collapse.default;
-var _Dropdown = _interopRequireDefault(require("./Dropdown"));
-exports.Dropdown = _Dropdown.default;
-var _DropdownButton = _interopRequireDefault(require("./DropdownButton"));
-exports.DropdownButton = _DropdownButton.default;
-var _Fade = _interopRequireDefault(require("./Fade"));
-exports.Fade = _Fade.default;
-var _Form = _interopRequireDefault(require("./Form"));
-exports.Form = _Form.default;
-var _FormControl = _interopRequireDefault(require("./FormControl"));
-exports.FormControl = _FormControl.default;
-var _FormCheck = _interopRequireDefault(require("./FormCheck"));
-exports.FormCheck = _FormCheck.default;
-var _FormFloating = _interopRequireDefault(require("./FormFloating"));
-exports.FormFloating = _FormFloating.default;
-var _FloatingLabel = _interopRequireDefault(require("./FloatingLabel"));
-exports.FloatingLabel = _FloatingLabel.default;
-var _FormGroup = _interopRequireDefault(require("./FormGroup"));
-exports.FormGroup = _FormGroup.default;
-var _FormLabel = _interopRequireDefault(require("./FormLabel"));
-exports.FormLabel = _FormLabel.default;
-var _FormText = _interopRequireDefault(require("./FormText"));
-exports.FormText = _FormText.default;
-var _FormSelect = _interopRequireDefault(require("./FormSelect"));
-exports.FormSelect = _FormSelect.default;
-var _Container = _interopRequireDefault(require("./Container"));
-exports.Container = _Container.default;
-var _Image = _interopRequireDefault(require("./Image"));
-exports.Image = _Image.default;
-var _Figure = _interopRequireDefault(require("./Figure"));
-exports.Figure = _Figure.default;
-var _InputGroup = _interopRequireDefault(require("./InputGroup"));
-exports.InputGroup = _InputGroup.default;
-var _ListGroup = _interopRequireDefault(require("./ListGroup"));
-exports.ListGroup = _ListGroup.default;
-var _ListGroupItem = _interopRequireDefault(require("./ListGroupItem"));
-exports.ListGroupItem = _ListGroupItem.default;
-var _Modal = _interopRequireDefault(require("./Modal"));
-exports.Modal = _Modal.default;
-var _ModalBody = _interopRequireDefault(require("./ModalBody"));
-exports.ModalBody = _ModalBody.default;
-var _ModalDialog = _interopRequireDefault(require("./ModalDialog"));
-exports.ModalDialog = _ModalDialog.default;
-var _ModalFooter = _interopRequireDefault(require("./ModalFooter"));
-exports.ModalFooter = _ModalFooter.default;
-var _ModalTitle = _interopRequireDefault(require("./ModalTitle"));
-exports.ModalTitle = _ModalTitle.default;
-var _Nav = _interopRequireDefault(require("./Nav"));
-exports.Nav = _Nav.default;
-var _Navbar = _interopRequireDefault(require("./Navbar"));
-exports.Navbar = _Navbar.default;
-var _NavbarBrand = _interopRequireDefault(require("./NavbarBrand"));
-exports.NavbarBrand = _NavbarBrand.default;
-var _NavDropdown = _interopRequireDefault(require("./NavDropdown"));
-exports.NavDropdown = _NavDropdown.default;
-var _NavItem = _interopRequireDefault(require("./NavItem"));
-exports.NavItem = _NavItem.default;
-var _NavLink = _interopRequireDefault(require("./NavLink"));
-exports.NavLink = _NavLink.default;
-var _Offcanvas = _interopRequireDefault(require("./Offcanvas"));
-exports.Offcanvas = _Offcanvas.default;
-var _OffcanvasHeader = _interopRequireDefault(require("./OffcanvasHeader"));
-exports.OffcanvasHeader = _OffcanvasHeader.default;
-var _OffcanvasTitle = _interopRequireDefault(require("./OffcanvasTitle"));
-exports.OffcanvasTitle = _OffcanvasTitle.default;
-var _OffcanvasBody = _interopRequireDefault(require("./OffcanvasBody"));
-exports.OffcanvasBody = _OffcanvasBody.default;
-var _Overlay = _interopRequireDefault(require("./Overlay"));
-exports.Overlay = _Overlay.default;
-var _OverlayTrigger = _interopRequireDefault(require("./OverlayTrigger"));
-exports.OverlayTrigger = _OverlayTrigger.default;
-var _PageItem = _interopRequireDefault(require("./PageItem"));
-exports.PageItem = _PageItem.default;
-var _Pagination = _interopRequireDefault(require("./Pagination"));
-exports.Pagination = _Pagination.default;
-var _Popover = _interopRequireDefault(require("./Popover"));
-exports.Popover = _Popover.default;
-var _PopoverHeader = _interopRequireDefault(require("./PopoverHeader"));
-exports.PopoverHeader = _PopoverHeader.default;
-var _PopoverBody = _interopRequireDefault(require("./PopoverBody"));
-exports.PopoverBody = _PopoverBody.default;
-var _ProgressBar = _interopRequireDefault(require("./ProgressBar"));
-exports.ProgressBar = _ProgressBar.default;
-var _Ratio = _interopRequireDefault(require("./Ratio"));
-exports.Ratio = _Ratio.default;
-var _Row = _interopRequireDefault(require("./Row"));
-exports.Row = _Row.default;
-var _SafeAnchor = _interopRequireDefault(require("./SafeAnchor"));
-exports.SafeAnchor = _SafeAnchor.default;
-var _Spinner = _interopRequireDefault(require("./Spinner"));
-exports.Spinner = _Spinner.default;
-var _SplitButton = _interopRequireDefault(require("./SplitButton"));
-exports.SplitButton = _SplitButton.default;
-var _Tab = _interopRequireDefault(require("./Tab"));
-exports.Tab = _Tab.default;
-var _TabContainer = _interopRequireDefault(require("./TabContainer"));
-exports.TabContainer = _TabContainer.default;
-var _TabContent = _interopRequireDefault(require("./TabContent"));
-exports.TabContent = _TabContent.default;
-var _Table = _interopRequireDefault(require("./Table"));
-exports.Table = _Table.default;
-var _TabPane = _interopRequireDefault(require("./TabPane"));
-exports.TabPane = _TabPane.default;
-var _Tabs = _interopRequireDefault(require("./Tabs"));
-exports.Tabs = _Tabs.default;
-var _ThemeProvider = _interopRequireDefault(require("./ThemeProvider"));
-exports.ThemeProvider = _ThemeProvider.default;
-var _Toast = _interopRequireDefault(require("./Toast"));
-exports.Toast = _Toast.default;
-var _ToastBody = _interopRequireDefault(require("./ToastBody"));
-exports.ToastBody = _ToastBody.default;
-var _ToastHeader = _interopRequireDefault(require("./ToastHeader"));
-exports.ToastHeader = _ToastHeader.default;
-var _ToastContainer = _interopRequireDefault(require("./ToastContainer"));
-exports.ToastContainer = _ToastContainer.default;
-var _ToggleButton = _interopRequireDefault(require("./ToggleButton"));
-exports.ToggleButton = _ToggleButton.default;
-var _ToggleButtonGroup = _interopRequireDefault(require("./ToggleButtonGroup"));
-exports.ToggleButtonGroup = _ToggleButtonGroup.default;
-var _Tooltip = _interopRequireDefault(require("./Tooltip"));
-exports.Tooltip = _Tooltip.default;
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function(nodeInterop1) {
-        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
-        default: obj
-    };
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) return cache.get(obj);
-    var newObj = {
-    };
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-        else newObj[key] = obj[key];
-    }
-    newObj.default = obj;
-    if (cache) cache.set(obj, newObj);
-    return newObj;
-}
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","./Accordion":"123ZC","./AccordionContext":"6cHdE","./AccordionCollapse":"6fr2G","./AccordionButton":"4QI10","./Alert":"1oIYX","./Badge":"2aFSj","./Breadcrumb":"hcZkb","./BreadcrumbItem":"fGRyA","./Button":"1ru0l","./ButtonGroup":"2THBw","./ButtonToolbar":"5QGeS","./Card":"1CZWQ","./CardColumns":"48yv5","./CardImg":"68LPL","./CardGroup":"1B9U7","./Carousel":"2Zcjk","./CarouselItem":"2tnC3","./CloseButton":"yWShL","./Col":"2D0r8","./Collapse":"4hhe0","./Dropdown":"27PdI","./DropdownButton":"7vE8v","./Fade":"2CU5C","./Form":"6A5ko","./FormControl":"573gP","./FormCheck":"6WcKM","./FormFloating":"6rS17","./FloatingLabel":"7brY9","./FormGroup":"120iJ","./FormLabel":"70qP9","./FormText":"2VsfR","./FormSelect":"4b2j3","./Container":"3Mt3t","./Image":"5qrP5","./Figure":"2ZDTl","./InputGroup":"3nb5C","./ListGroup":"6fErm","./ListGroupItem":"4tfxm","./Modal":"20uUD","./ModalBody":"5Zu6o","./ModalDialog":"4OqPY","./ModalFooter":"4rYLN","./ModalTitle":"MJz12","./Nav":"3T3v1","./Navbar":"3qLFd","./NavbarBrand":"4flFi","./NavDropdown":"1qmIy","./NavItem":"39J70","./NavLink":"6stbu","./Offcanvas":"6FzOX","./OffcanvasHeader":"6nkPu","./OffcanvasTitle":"5ma32","./OffcanvasBody":"46UQD","./Overlay":"5PcTh","./OverlayTrigger":"4VaCP","./PageItem":"6IcgF","./Pagination":"3XBVG","./Popover":"4O1Nl","./PopoverHeader":"hz4Ka","./PopoverBody":"5Vd86","./ProgressBar":"4HfN1","./Ratio":"2aW27","./Row":"3fzwD","./SafeAnchor":"5VP5o","./Spinner":"4fhZt","./SplitButton":"qFVWq","./Tab":"2o9hU","./TabContainer":"31im4","./TabContent":"4a1d3","./Table":"34yor","./TabPane":"42ci1","./Tabs":"6YwyY","./ThemeProvider":"4rz1S","./Toast":"o9l9n","./ToastBody":"4qMwS","./ToastHeader":"3bTJs","./ToastContainer":"ESs7C","./ToggleButton":"1noIF","./ToggleButtonGroup":"LW99s","./Tooltip":"2YAjd"}],"123ZC":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.default = void 0;
-var _classnames = _interopRequireDefault(require("classnames"));
-var React = _interopRequireWildcard(require("react"));
-var _uncontrollable = require("uncontrollable");
-var _ThemeProvider = require("./ThemeProvider");
-var _AccordionBody = _interopRequireDefault(require("./AccordionBody"));
-var _AccordionButton = _interopRequireDefault(require("./AccordionButton"));
-var _AccordionCollapse = _interopRequireDefault(require("./AccordionCollapse"));
-var _AccordionContext = _interopRequireDefault(require("./AccordionContext"));
-var _AccordionHeader = _interopRequireDefault(require("./AccordionHeader"));
-var _AccordionItem = _interopRequireDefault(require("./AccordionItem"));
-var _jsxRuntime = require("react/jsx-runtime");
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function(nodeInterop1) {
-        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
-        default: obj
-    };
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) return cache.get(obj);
-    var newObj = {
-    };
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-        else newObj[key] = obj[key];
-    }
-    newObj.default = obj;
-    if (cache) cache.set(obj, newObj);
-    return newObj;
-}
-const Accordion = /*#__PURE__*/ React.forwardRef((props, ref)=>{
-    const { // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-    as: Component = 'div' , activeKey , bsPrefix , className , onSelect , flush , ...controlledProps } = _uncontrollable.useUncontrolled(props, {
-        activeKey: 'onSelect'
-    });
-    const prefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'accordion');
-    const contextValue = React.useMemo(()=>({
-            activeEventKey: activeKey,
-            onSelect
-        })
-    , [
-        activeKey,
-        onSelect
-    ]);
-    return(/*#__PURE__*/ _jsxRuntime.jsx(_AccordionContext.default.Provider, {
-        value: contextValue,
-        children: /*#__PURE__*/ _jsxRuntime.jsx(Component, {
-            ref: ref,
-            ...controlledProps,
-            className: _classnames.default(className, prefix, flush && `${prefix}-flush`)
-        })
-    }));
-});
-Accordion.displayName = 'Accordion';
-var _default = Object.assign(Accordion, {
-    Button: _AccordionButton.default,
-    Collapse: _AccordionCollapse.default,
-    Item: _AccordionItem.default,
-    Header: _AccordionHeader.default,
-    Body: _AccordionBody.default
-});
-exports.default = _default;
-module.exports = exports.default;
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","uncontrollable":"4P7FS","./ThemeProvider":"4rz1S","./AccordionBody":"jQhi5","./AccordionButton":"4QI10","./AccordionCollapse":"6fr2G","./AccordionContext":"6cHdE","./AccordionHeader":"6C8me","./AccordionItem":"RhMSn","react/jsx-runtime":"7jBZW"}],"jQhi5":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.default = void 0;
-var _classnames = _interopRequireDefault(require("classnames"));
-var React = _interopRequireWildcard(require("react"));
-var _ThemeProvider = require("./ThemeProvider");
-var _AccordionCollapse = _interopRequireDefault(require("./AccordionCollapse"));
-var _AccordionItemContext = _interopRequireDefault(require("./AccordionItemContext"));
-var _jsxRuntime = require("react/jsx-runtime");
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function(nodeInterop1) {
-        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
-        default: obj
-    };
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) return cache.get(obj);
-    var newObj = {
-    };
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-        else newObj[key] = obj[key];
-    }
-    newObj.default = obj;
-    if (cache) cache.set(obj, newObj);
-    return newObj;
-}
-const AccordionBody = /*#__PURE__*/ React.forwardRef(({ // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
-as: Component = 'div' , bsPrefix , className , ...props }, ref)=>{
-    bsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'accordion-body');
-    const { eventKey  } = React.useContext(_AccordionItemContext.default);
-    return(/*#__PURE__*/ _jsxRuntime.jsx(_AccordionCollapse.default, {
-        eventKey: eventKey,
-        children: /*#__PURE__*/ _jsxRuntime.jsx(Component, {
-            ref: ref,
-            ...props,
-            className: _classnames.default(className, bsPrefix)
-        })
-    }));
-});
-AccordionBody.displayName = 'AccordionBody';
-var _default = AccordionBody;
-exports.default = _default;
-module.exports = exports.default;
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S","./AccordionCollapse":"6fr2G","./AccordionItemContext":"1xzxZ","react/jsx-runtime":"7jBZW"}],"6fr2G":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.default = void 0;
-var _classnames = _interopRequireDefault(require("classnames"));
-var React = _interopRequireWildcard(require("react"));
-var _ThemeProvider = require("./ThemeProvider");
-var _Collapse = _interopRequireDefault(require("./Collapse"));
-var _AccordionContext = _interopRequireDefault(require("./AccordionContext"));
-var _jsxRuntime = require("react/jsx-runtime");
-function _getRequireWildcardCache(nodeInterop) {
-    if (typeof WeakMap !== "function") return null;
-    var cacheBabelInterop = new WeakMap();
-    var cacheNodeInterop = new WeakMap();
-    return (_getRequireWildcardCache = function(nodeInterop1) {
-        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
-    })(nodeInterop);
-}
-function _interopRequireWildcard(obj, nodeInterop) {
-    if (!nodeInterop && obj && obj.__esModule) return obj;
-    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
-        default: obj
-    };
-    var cache = _getRequireWildcardCache(nodeInterop);
-    if (cache && cache.has(obj)) return cache.get(obj);
-    var newObj = {
-    };
-    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
-        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
-        else newObj[key] = obj[key];
-    }
-    newObj.default = obj;
-    if (cache) cache.set(obj, newObj);
-    return newObj;
-}
-const AccordionCollapse = /*#__PURE__*/ React.forwardRef(({ bsPrefix , className , children , eventKey , ...props }, ref)=>{
-    const { activeEventKey  } = React.useContext(_AccordionContext.default);
-    bsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'accordion-collapse');
-    return(/*#__PURE__*/ _jsxRuntime.jsx(_Collapse.default, {
-        ref: ref,
-        in: activeEventKey === eventKey,
-        ...props,
-        className: _classnames.default(className, bsPrefix),
-        children: /*#__PURE__*/ _jsxRuntime.jsx("div", {
-            children: React.Children.only(children)
-        })
-    }));
-});
-AccordionCollapse.displayName = 'AccordionCollapse';
-var _default = AccordionCollapse;
-exports.default = _default;
-module.exports = exports.default;
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S","./Collapse":"4hhe0","./AccordionContext":"6cHdE","react/jsx-runtime":"7jBZW"}],"6cHdE":[function(require,module,exports) {
+},{"react":"3b2NM"}],"6cHdE":[function(require,module,exports) {
 "use strict";
 exports.__esModule = true;
 exports.default = void 0;
@@ -32728,7 +32325,52 @@ var _default = Object.assign(Alert, {
 exports.default = _default;
 module.exports = exports.default;
 
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","uncontrollable":"4P7FS","@restart/hooks/useEventCallback":"3v8B9","./ThemeProvider":"4rz1S","./Fade":"2CU5C","./CloseButton":"yWShL","./divWithClassName":"27J3S","./createWithBsPrefix":"2oVVc","./SafeAnchor":"5VP5o","react/jsx-runtime":"7jBZW"}],"2CU5C":[function(require,module,exports) {
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","uncontrollable":"4P7FS","@restart/hooks/useEventCallback":"3v8B9","./ThemeProvider":"4rz1S","./Fade":"2CU5C","./CloseButton":"yWShL","./divWithClassName":"27J3S","./createWithBsPrefix":"2oVVc","./SafeAnchor":"5VP5o","react/jsx-runtime":"7jBZW"}],"3v8B9":[function(require,module,exports) {
+"use strict";
+exports.__esModule = true;
+exports.default = useEventCallback;
+var _react = require("react");
+var _useCommittedRef = _interopRequireDefault(require("./useCommittedRef"));
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+function useEventCallback(fn) {
+    var ref = _useCommittedRef.default(fn);
+    return _react.useCallback(function() {
+        return ref.current && ref.current.apply(ref, arguments);
+    }, [
+        ref
+    ]);
+}
+
+},{"react":"3b2NM","./useCommittedRef":"4xIdB"}],"4xIdB":[function(require,module,exports) {
+"use strict";
+exports.__esModule = true;
+exports.default = void 0;
+var _react = require("react");
+/**
+ * Creates a `Ref` whose value is updated in an effect, ensuring the most recent
+ * value is the one rendered with. Generally only required for Concurrent mode usage
+ * where previous work in `render()` may be discarded befor being used.
+ *
+ * This is safe to access in an event handler.
+ *
+ * @param value The `Ref` value
+ */ function useCommittedRef(value) {
+    var ref = _react.useRef(value);
+    _react.useEffect(function() {
+        ref.current = value;
+    }, [
+        value
+    ]);
+    return ref;
+}
+var _default = useCommittedRef;
+exports.default = _default;
+
+},{"react":"3b2NM"}],"2CU5C":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -36603,7 +36245,48 @@ var _default = DropdownItem;
 exports.default = _default;
 module.exports = exports.default;
 
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","@restart/hooks/useEventCallback":"3v8B9","./SelectableContext":"3ATFf","./ThemeProvider":"4rz1S","./NavContext":"7zQ1K","./SafeAnchor":"5VP5o","react/jsx-runtime":"7jBZW"}],"7zQ1K":[function(require,module,exports) {
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","@restart/hooks/useEventCallback":"3v8B9","./SelectableContext":"3ATFf","./ThemeProvider":"4rz1S","./NavContext":"7zQ1K","./SafeAnchor":"5VP5o","react/jsx-runtime":"7jBZW"}],"3ATFf":[function(require,module,exports) {
+"use strict";
+exports.__esModule = true;
+exports.default = exports.makeEventKey = void 0;
+var React = _interopRequireWildcard(require("react"));
+function _getRequireWildcardCache(nodeInterop) {
+    if (typeof WeakMap !== "function") return null;
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+    return (_getRequireWildcardCache = function(nodeInterop1) {
+        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop);
+}
+function _interopRequireWildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) return obj;
+    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
+        default: obj
+    };
+    var cache = _getRequireWildcardCache(nodeInterop);
+    if (cache && cache.has(obj)) return cache.get(obj);
+    var newObj = {
+    };
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+        else newObj[key] = obj[key];
+    }
+    newObj.default = obj;
+    if (cache) cache.set(obj, newObj);
+    return newObj;
+}
+const SelectableContext = /*#__PURE__*/ React.createContext(null);
+const makeEventKey = (eventKey, href = null)=>{
+    if (eventKey != null) return String(eventKey);
+    return href || null;
+};
+exports.makeEventKey = makeEventKey;
+var _default = SelectableContext;
+exports.default = _default;
+
+},{"react":"3b2NM"}],"7zQ1K":[function(require,module,exports) {
 "use strict";
 exports.__esModule = true;
 exports.default = void 0;
@@ -36791,6 +36474,44 @@ function _interopRequireWildcard(obj, nodeInterop) {
 }
 const context = /*#__PURE__*/ React.createContext(null);
 context.displayName = 'InputGroupContext';
+var _default = context;
+exports.default = _default;
+module.exports = exports.default;
+
+},{"react":"3b2NM"}],"1Ts0D":[function(require,module,exports) {
+"use strict";
+exports.__esModule = true;
+exports.default = void 0;
+var React = _interopRequireWildcard(require("react"));
+function _getRequireWildcardCache(nodeInterop) {
+    if (typeof WeakMap !== "function") return null;
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+    return (_getRequireWildcardCache = function(nodeInterop1) {
+        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop);
+}
+function _interopRequireWildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) return obj;
+    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
+        default: obj
+    };
+    var cache = _getRequireWildcardCache(nodeInterop);
+    if (cache && cache.has(obj)) return cache.get(obj);
+    var newObj = {
+    };
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+        else newObj[key] = obj[key];
+    }
+    newObj.default = obj;
+    if (cache) cache.set(obj, newObj);
+    return newObj;
+}
+const context = /*#__PURE__*/ React.createContext(null);
+context.displayName = 'NavbarContext';
 var _default = context;
 exports.default = _default;
 module.exports = exports.default;
@@ -39142,7 +38863,285 @@ var _default = NavLink;
 exports.default = _default;
 module.exports = exports.default;
 
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","./SafeAnchor":"5VP5o","./AbstractNavItem":"3jbfQ","./ThemeProvider":"4rz1S","react/jsx-runtime":"7jBZW"}],"1qmIy":[function(require,module,exports) {
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","./SafeAnchor":"5VP5o","./AbstractNavItem":"3jbfQ","./ThemeProvider":"4rz1S","react/jsx-runtime":"7jBZW"}],"3qLFd":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports.default = void 0;
+var _classnames = _interopRequireDefault(require("classnames"));
+var React = _interopRequireWildcard(require("react"));
+var _uncontrollable = require("uncontrollable");
+var _createWithBsPrefix = _interopRequireDefault(require("./createWithBsPrefix"));
+var _NavbarBrand = _interopRequireDefault(require("./NavbarBrand"));
+var _NavbarCollapse = _interopRequireDefault(require("./NavbarCollapse"));
+var _NavbarToggle = _interopRequireDefault(require("./NavbarToggle"));
+var _ThemeProvider = require("./ThemeProvider");
+var _NavbarContext = _interopRequireDefault(require("./NavbarContext"));
+var _SelectableContext = _interopRequireDefault(require("./SelectableContext"));
+var _jsxRuntime = require("react/jsx-runtime");
+function _getRequireWildcardCache(nodeInterop) {
+    if (typeof WeakMap !== "function") return null;
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+    return (_getRequireWildcardCache = function(nodeInterop1) {
+        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop);
+}
+function _interopRequireWildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) return obj;
+    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
+        default: obj
+    };
+    var cache = _getRequireWildcardCache(nodeInterop);
+    if (cache && cache.has(obj)) return cache.get(obj);
+    var newObj = {
+    };
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+        else newObj[key] = obj[key];
+    }
+    newObj.default = obj;
+    if (cache) cache.set(obj, newObj);
+    return newObj;
+}
+const NavbarText = _createWithBsPrefix.default('navbar-text', {
+    Component: 'span'
+});
+const defaultProps = {
+    expand: true,
+    variant: 'light',
+    collapseOnSelect: false
+};
+const Navbar = /*#__PURE__*/ React.forwardRef((props, ref)=>{
+    const { bsPrefix: initialBsPrefix , expand , variant , bg , fixed , sticky , className , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+    as: Component = 'nav' , expanded , onToggle , onSelect , collapseOnSelect , ...controlledProps } = _uncontrollable.useUncontrolled(props, {
+        expanded: 'onToggle'
+    });
+    const bsPrefix = _ThemeProvider.useBootstrapPrefix(initialBsPrefix, 'navbar');
+    const handleCollapse = React.useCallback((...args)=>{
+        onSelect == null || onSelect(...args);
+        if (collapseOnSelect && expanded) onToggle == null || onToggle(false);
+    }, [
+        onSelect,
+        collapseOnSelect,
+        expanded,
+        onToggle
+    ]); // will result in some false positives but that seems better
+    // than false negatives. strict `undefined` check allows explicit
+    // "nulling" of the role if the user really doesn't want one
+    if (controlledProps.role === undefined && Component !== 'nav') controlledProps.role = 'navigation';
+    let expandClass = `${bsPrefix}-expand`;
+    if (typeof expand === 'string') expandClass = `${expandClass}-${expand}`;
+    const navbarContext = React.useMemo(()=>({
+            onToggle: ()=>onToggle == null ? void 0 : onToggle(!expanded)
+            ,
+            bsPrefix,
+            expanded: !!expanded
+        })
+    , [
+        bsPrefix,
+        expanded,
+        onToggle
+    ]);
+    return(/*#__PURE__*/ _jsxRuntime.jsx(_NavbarContext.default.Provider, {
+        value: navbarContext,
+        children: /*#__PURE__*/ _jsxRuntime.jsx(_SelectableContext.default.Provider, {
+            value: handleCollapse,
+            children: /*#__PURE__*/ _jsxRuntime.jsx(Component, {
+                ref: ref,
+                ...controlledProps,
+                className: _classnames.default(className, bsPrefix, expand && expandClass, variant && `${bsPrefix}-${variant}`, bg && `bg-${bg}`, sticky && `sticky-${sticky}`, fixed && `fixed-${fixed}`)
+            })
+        })
+    }));
+});
+Navbar.defaultProps = defaultProps;
+Navbar.displayName = 'Navbar';
+var _default = Object.assign(Navbar, {
+    Brand: _NavbarBrand.default,
+    Toggle: _NavbarToggle.default,
+    Collapse: _NavbarCollapse.default,
+    Text: NavbarText
+});
+exports.default = _default;
+module.exports = exports.default;
+
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","uncontrollable":"4P7FS","./createWithBsPrefix":"2oVVc","./NavbarBrand":"4flFi","./NavbarCollapse":"6KfIh","./NavbarToggle":"4uQiD","./ThemeProvider":"4rz1S","./NavbarContext":"1Ts0D","./SelectableContext":"3ATFf","react/jsx-runtime":"7jBZW"}],"4flFi":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports.default = void 0;
+var _classnames = _interopRequireDefault(require("classnames"));
+var React = _interopRequireWildcard(require("react"));
+var _ThemeProvider = require("./ThemeProvider");
+var _jsxRuntime = require("react/jsx-runtime");
+function _getRequireWildcardCache(nodeInterop) {
+    if (typeof WeakMap !== "function") return null;
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+    return (_getRequireWildcardCache = function(nodeInterop1) {
+        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop);
+}
+function _interopRequireWildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) return obj;
+    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
+        default: obj
+    };
+    var cache = _getRequireWildcardCache(nodeInterop);
+    if (cache && cache.has(obj)) return cache.get(obj);
+    var newObj = {
+    };
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+        else newObj[key] = obj[key];
+    }
+    newObj.default = obj;
+    if (cache) cache.set(obj, newObj);
+    return newObj;
+}
+const NavbarBrand = /*#__PURE__*/ React.forwardRef(({ bsPrefix , className , as , ...props }, ref)=>{
+    bsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'navbar-brand');
+    const Component = as || (props.href ? 'a' : 'span');
+    return(/*#__PURE__*/ _jsxRuntime.jsx(Component, {
+        ...props,
+        ref: ref,
+        className: _classnames.default(className, bsPrefix)
+    }));
+});
+NavbarBrand.displayName = 'NavbarBrand';
+var _default = NavbarBrand;
+exports.default = _default;
+module.exports = exports.default;
+
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S","react/jsx-runtime":"7jBZW"}],"6KfIh":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports.default = void 0;
+var React = _interopRequireWildcard(require("react"));
+var _Collapse = _interopRequireDefault(require("./Collapse"));
+var _ThemeProvider = require("./ThemeProvider");
+var _NavbarContext = _interopRequireDefault(require("./NavbarContext"));
+var _jsxRuntime = require("react/jsx-runtime");
+function _getRequireWildcardCache(nodeInterop) {
+    if (typeof WeakMap !== "function") return null;
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+    return (_getRequireWildcardCache = function(nodeInterop1) {
+        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop);
+}
+function _interopRequireWildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) return obj;
+    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
+        default: obj
+    };
+    var cache = _getRequireWildcardCache(nodeInterop);
+    if (cache && cache.has(obj)) return cache.get(obj);
+    var newObj = {
+    };
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+        else newObj[key] = obj[key];
+    }
+    newObj.default = obj;
+    if (cache) cache.set(obj, newObj);
+    return newObj;
+}
+const NavbarCollapse = /*#__PURE__*/ React.forwardRef(({ children , bsPrefix , ...props }, ref)=>{
+    bsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'navbar-collapse');
+    const context = React.useContext(_NavbarContext.default);
+    return(/*#__PURE__*/ _jsxRuntime.jsx(_Collapse.default, {
+        in: !!(context && context.expanded),
+        ...props,
+        children: /*#__PURE__*/ _jsxRuntime.jsx("div", {
+            ref: ref,
+            className: bsPrefix,
+            children: children
+        })
+    }));
+});
+NavbarCollapse.displayName = 'NavbarCollapse';
+var _default = NavbarCollapse;
+exports.default = _default;
+module.exports = exports.default;
+
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","react":"3b2NM","./Collapse":"4hhe0","./ThemeProvider":"4rz1S","./NavbarContext":"1Ts0D","react/jsx-runtime":"7jBZW"}],"4uQiD":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports.default = void 0;
+var _classnames = _interopRequireDefault(require("classnames"));
+var React = _interopRequireWildcard(require("react"));
+var _useEventCallback = _interopRequireDefault(require("@restart/hooks/useEventCallback"));
+var _ThemeProvider = require("./ThemeProvider");
+var _NavbarContext = _interopRequireDefault(require("./NavbarContext"));
+var _jsxRuntime = require("react/jsx-runtime");
+function _getRequireWildcardCache(nodeInterop) {
+    if (typeof WeakMap !== "function") return null;
+    var cacheBabelInterop = new WeakMap();
+    var cacheNodeInterop = new WeakMap();
+    return (_getRequireWildcardCache = function(nodeInterop1) {
+        return nodeInterop1 ? cacheNodeInterop : cacheBabelInterop;
+    })(nodeInterop);
+}
+function _interopRequireWildcard(obj, nodeInterop) {
+    if (!nodeInterop && obj && obj.__esModule) return obj;
+    if (obj === null || typeof obj !== "object" && typeof obj !== "function") return {
+        default: obj
+    };
+    var cache = _getRequireWildcardCache(nodeInterop);
+    if (cache && cache.has(obj)) return cache.get(obj);
+    var newObj = {
+    };
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+    for(var key in obj)if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) {
+        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+        else newObj[key] = obj[key];
+    }
+    newObj.default = obj;
+    if (cache) cache.set(obj, newObj);
+    return newObj;
+}
+const defaultProps = {
+    label: 'Toggle navigation'
+};
+const NavbarToggle = /*#__PURE__*/ React.forwardRef(({ bsPrefix , className , children , label , // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
+as: Component = 'button' , onClick , ...props }, ref)=>{
+    bsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'navbar-toggler');
+    const { onToggle , expanded  } = React.useContext(_NavbarContext.default) || {
+    };
+    const handleClick = _useEventCallback.default((e)=>{
+        if (onClick) onClick(e);
+        if (onToggle) onToggle();
+    });
+    if (Component === 'button') props.type = 'button';
+    return(/*#__PURE__*/ _jsxRuntime.jsx(Component, {
+        ...props,
+        ref: ref,
+        onClick: handleClick,
+        "aria-label": label,
+        className: _classnames.default(className, bsPrefix, !expanded && 'collapsed'),
+        children: children || /*#__PURE__*/ _jsxRuntime.jsx("span", {
+            className: `${bsPrefix}-icon`
+        })
+    }));
+});
+NavbarToggle.displayName = 'NavbarToggle';
+NavbarToggle.defaultProps = defaultProps;
+var _default = NavbarToggle;
+exports.default = _default;
+module.exports = exports.default;
+
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","@restart/hooks/useEventCallback":"3v8B9","./ThemeProvider":"4rz1S","./NavbarContext":"1Ts0D","react/jsx-runtime":"7jBZW"}],"1qmIy":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -41591,6 +41590,6 @@ var _default = Tooltip;
 exports.default = _default;
 module.exports = exports.default;
 
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","prop-types-extra/lib/isRequiredForA11y":"4XrEc","./ThemeProvider":"4rz1S","react/jsx-runtime":"7jBZW"}],"7KOj3":[function() {},{}],"JOw5y":[function() {},{}]},["1j6wU","4x6Mp","50ops"], "50ops", "parcelRequire279c")
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","prop-types-extra/lib/isRequiredForA11y":"4XrEc","./ThemeProvider":"4rz1S","react/jsx-runtime":"7jBZW"}],"7KOj3":[function() {},{}],"JOw5y":[function() {},{}],"3OZ0H":[function() {},{}]},["1j6wU","4x6Mp","50ops"], "50ops", "parcelRequire279c")
 
 //# sourceMappingURL=index.bf6c691a.js.map

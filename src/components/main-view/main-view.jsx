@@ -12,7 +12,7 @@ import { DirectorView } from '../director-view/director-view';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import NavBar from 'react-bootstrap/NavBar';
+
 
 
 class MainView extends React.Component {
@@ -114,7 +114,7 @@ class MainView extends React.Component {
             </Col>
             if (movies.length === 0) return <div className="main-view" />;
             return <Col md={8}>
-              <DirectorView director={movies.find(m => m.Director.Name === match.params.name).Director} onBackClick={() => history.goBack()} />
+              <DirectorView movie={movies.find(m => m.Director.Name === match.params.name)} onBackClick={() => history.goBack()} />
             </Col>
           }
           } />
