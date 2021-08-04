@@ -41688,7 +41688,8 @@ GenreView.propTypes = {
     genre: _propTypesDefault.default.shape({
         Name: _propTypesDefault.default.string.isRequired,
         Description: _propTypesDefault.default.string.isRequired
-    }).isRequired
+    }),
+    onBackClick: _propTypesDefault.default.func.isRequired
 };
 
   helpers.postlude(module);
