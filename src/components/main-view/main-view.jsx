@@ -9,6 +9,8 @@ import { RegistrationView } from '../registration-view/registration-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { DirectorView } from '../director-view/director-view';
+import { GenreView } from '../genre-view/genre-view';
+import { ProfileView } from '../profile-view/profile-view';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -119,16 +121,22 @@ class MainView extends React.Component {
           }
           } />
 
-          <Route path="/movies/genres/:name" render={({ match, history }) => {
+          <Route path="/genre/:name" render={({ match, history }) => {
             if (!user) return <Col>
               <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
             </Col>
             if (movies.length === 0) return <div className="main-view" />;
             return <Col md={8}>
-              <GenreView genre={movies.find(m => m.Genre.Name === match.params.name).Genre} onBackClick={() => history.goBack()} />
+              <GenreView movie={movies.find(m => m.Genre.Name === match.params.name)} onBackClick={() => history.goBack()} />
             </Col>
-          }
-          } />
+          }} />
+
+          <Route exact path='/users/:username' render={({ history }) => {
+            if (!user) return <LoginView onLoggedIn={(data) => this.onLoggedIn(data)} />;
+            if (movies.length === 0) return;
+            return <ProfileView history={history} movies={movies} />
+          }} />
+
         </Row>
       </Router>
     );
