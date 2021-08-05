@@ -11,9 +11,10 @@ import { MovieView } from '../movie-view/movie-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { ProfileView } from '../profile-view/profile-view';
+//import { NavBar } from '../navbar-view/navbar-view';
 
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Row, Col, NavBar, Form, Link } from 'react-bootstrap';
+
 
 
 
@@ -80,7 +81,29 @@ class MainView extends React.Component {
   render() {
     const { movies, user } = this.state;
     return (
+      
       <Router>
+        <header>
+          <Navbar bg="dark" expand="lg" fixed="top" variant='dark'>
+            <Navbar.Brand className='home' as={Link} to={`/`} target='_self'>myFlix</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mr-auto">
+                <Nav.Link className='home' as={Link} to={`/`} target='_self'>Home</Nav.Link>
+                  {user &&
+                <Nav.Link className='profile' as={Link} to={`/users/${user}`} target='_self'>Profile</Nav.Link>
+                  }
+              </Nav>
+              <Form inline>
+                {user &&
+                  <Link to={`/`}>
+                    <Button variant="dark" className='logout-button' onClick={() => this.onLogout()}>Logout</Button>
+                  </Link>
+                }
+              </Form>
+              </Navbar.Collapse>
+          </Navbar>
+        </header>
         <Row className="main-view justify-content-md-center">
           <Route exact path="/" render={() => {
             if (!user) return <Col>

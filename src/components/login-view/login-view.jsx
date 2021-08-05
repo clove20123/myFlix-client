@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import NavBar from 'react-bootstrap/NavBar';
 import axios from 'axios';
 
 export function LoginView(props) {
