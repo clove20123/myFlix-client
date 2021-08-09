@@ -13,7 +13,7 @@ import GenreView from '../genre-view/genre-view';
 import ProfileView from '../profile-view/profile-view';
 //import { NavBar } from '../navbar-view/navbar-view';
 
-import { Row, Col, Form, Navbar, Nav, Button } from 'react-bootstrap';
+import { Row, Col, Form, Navbar, Nav, Button, Container } from 'react-bootstrap';
 
 
 
@@ -48,6 +48,16 @@ class MainView extends React.Component {
     localStorage.setItem('token', authData.token);
     localStorage.setItem('user', authData.user.Username);
     this.getMovies(authData.token);
+  }
+
+  onLogout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    this.setState({
+      user: null,
+    });
+    console.log("logout successful");
+    window.open("/", "_self");
   }
 
 
@@ -104,6 +114,7 @@ class MainView extends React.Component {
               </Navbar.Collapse>
           </Navbar>
         </header> 
+        <Container fluid>
         <Row className="main-view justify-content-md-center">
           <Route exact path="/" render={() => {
             if (!user) return <Col>
@@ -144,13 +155,13 @@ class MainView extends React.Component {
           }
           } />
 
-          <Route path="/genre/:name" render={({ match, history }) => {
+          <Route path="/genres/:name" render={({ match, history }) => {
             if (!user) return <Col>
               <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
             </Col>
             if (movies.length === 0) return <div className="main-view" />;
             return <Col md={8}>
-              <GenreView movie={movies.find(m => m.Genre.Name === match.params.name)} onBackClick={() => history.goBack()} />
+              <GenreView movies={movies.find(m => m.Genre.Name === match.params.name)} onBackClick={() => history.goBack()} />
             </Col>
           }} />
 
@@ -161,6 +172,7 @@ class MainView extends React.Component {
           }} />
 
         </Row>
+        </Container>
       </Router>
     );
   }

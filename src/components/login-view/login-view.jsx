@@ -31,7 +31,7 @@ function LoginView(props) {
   };
 
   return (
-    <Container>
+    <Container fluid>
     <Form className="LoginForm">
       <Row>
         <Col>

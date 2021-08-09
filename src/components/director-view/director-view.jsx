@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import './director-view.scss';
 
-export class DirectorView extends React.Component {
+class DirectorView extends React.Component {
   
   render() {
     const { movie, onBackClick } = this.props;
@@ -41,3 +41,5 @@ DirectorView.propTypes = {
   }),
   onBackClick: PropTypes.func.isRequired
 };
+
+export default DirectorView;
