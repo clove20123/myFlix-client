@@ -27699,6 +27699,7 @@ function LoginView(props) {
         },
         __self: this
     }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Group, {
+        calssName: "postion-relative mb-3",
         controlId: "formGroupUsername",
         __source: {
             fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\login-view\\login-view.jsx",
@@ -31543,53 +31544,65 @@ class MovieCard extends _reactDefault.default.Component {
     render() {
         const { movie  } = this.props;
         return(/*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default, {
-            className: "mb-3",
-            style: {
-                width: '18rem'
-            },
+            bg: "secondary",
+            text: "white",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
                 lineNumber: 16
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Img, {
-            variant: "top",
-            src: movie.ImagePath,
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: `/movies/${movie._id}`,
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
                 lineNumber: 17
             },
             __self: this
-        }), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Body, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Img, {
+            className: "image-container",
+            variant: "top",
+            src: movie.ImageURL,
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
                 lineNumber: 18
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Title, {
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
-                lineNumber: 19
-            },
-            __self: this
-        }, movie.Title), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Body, {
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
                 lineNumber: 20
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Title, {
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 21
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("h4", {
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 21
+            },
+            __self: this
+        }, movie.Title)), /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default.Text, {
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 22
             },
             __self: this
         }, movie.Description), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
             to: `/movies/${movie._id}`,
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
-                lineNumber: 21
+                lineNumber: 23
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
-            variant: "link",
+            variant: "primary",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
-                lineNumber: 22
+                lineNumber: 24
             },
             __self: this
         }, "Open")))));
@@ -31600,8 +31613,7 @@ MovieCard.propTypes = {
         Title: _propTypesDefault.default.string.isRequired,
         Description: _propTypesDefault.default.string.isRequired,
         Featured: _propTypesDefault.default.bool.isRequired
-    }).isRequired,
-    onMovieClick: _propTypesDefault.default.func.isRequired
+    }).isRequired
 };
 exports.default = MovieCard;
 
