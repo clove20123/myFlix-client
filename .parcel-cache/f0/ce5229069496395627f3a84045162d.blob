@@ -1,6 +1,0 @@
-.LoginForm {
-  margin: auto;
-  max-width: 250px;
-  align-content: center;
-  background-color: aqua;
-}
