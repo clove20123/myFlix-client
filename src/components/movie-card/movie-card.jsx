@@ -6,7 +6,7 @@ import "./movie-card.scss"
 
 import { Link } from "react-router-dom";
 
-export class MovieCard extends React.Component {
+class MovieCard extends React.Component {
   render() {
     const { movie } = this.props;
 
@@ -43,3 +43,5 @@ MovieCard.proptypes = {
   }).isRequired,
   onMovieCClick: PropTypes.func.isRequired
 };
+
+export default MovieCard;

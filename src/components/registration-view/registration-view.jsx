@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 
 import PropTypes from 'prop-types';
 
-export function RegistrationView(props) {
+function RegistrationView(props) {
   const [Username, setUsername] = useState('');
   const [Password, setPassword] = useState('');
   const [Email, setEmail] = useState('');
@@ -73,3 +73,5 @@ RegistrationView.propTypes = {
     Birthdate: PropTypes.string.isRequired
   }),
 };
+
+export default RegistrationView;

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Button, Card, CardDeck, Form, Row } from 'react-bootstrap';
 import './profile-view.scss';
 
-export class ProfileView extends React.Component {
+class ProfileView extends React.Component {
   constructor() {
     super();
 
@@ -247,3 +247,5 @@ ProfileView.propTypes = {
     Birthdate: PropTypes.string,
   }),
 };
+
+export default ProfileView;

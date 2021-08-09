@@ -2,18 +2,18 @@ import React from 'react';
 import axios from 'axios';
 import './main-view.scss';
 
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Link } from "react-router-dom";
 
-import { LoginView } from '../login-view/login-view';
-import { RegistrationView } from '../registration-view/registration-view';
-import { MovieCard } from '../movie-card/movie-card';
-import { MovieView } from '../movie-view/movie-view';
-import { DirectorView } from '../director-view/director-view';
-import { GenreView } from '../genre-view/genre-view';
-import { ProfileView } from '../profile-view/profile-view';
+import LoginView from '../login-view/login-view';
+import RegistrationView from '../registration-view/registration-view';
+import MovieCard from '../movie-card/movie-card';
+import MovieView from '../movie-view/movie-view';
+import DirectorView from '../director-view/director-view';
+import GenreView from '../genre-view/genre-view';
+import ProfileView from '../profile-view/profile-view';
 //import { NavBar } from '../navbar-view/navbar-view';
 
-import { Row, Col, NavBar, Form, Link } from 'react-bootstrap';
+import { Row, Col, Form, Navbar, Nav, Button } from 'react-bootstrap';
 
 
 
@@ -83,7 +83,7 @@ class MainView extends React.Component {
     return (
       
       <Router>
-        <header>
+         <header>
           <Navbar bg="dark" expand="lg" fixed="top" variant='dark'>
             <Navbar.Brand className='home' as={Link} to={`/`} target='_self'>myFlix</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -103,7 +103,7 @@ class MainView extends React.Component {
               </Form>
               </Navbar.Collapse>
           </Navbar>
-        </header>
+        </header> 
         <Row className="main-view justify-content-md-center">
           <Route exact path="/" render={() => {
             if (!user) return <Col>

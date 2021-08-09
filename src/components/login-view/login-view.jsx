@@ -6,10 +6,10 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import NavBar from 'react-bootstrap/NavBar';
+import Navbar from 'react-bootstrap/Navbar';
 import axios from 'axios';
 
-export function LoginView(props) {
+function LoginView(props) {
   const [ Username, setUsername ] = useState('');
   const [ Password, setPassword ] = useState('');
 
@@ -64,3 +64,4 @@ LoginView.propTypes = {
   onLoggedIn: PropTypes.func.isRequired
 };
 
+export default LoginView;
