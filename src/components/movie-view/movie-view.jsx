@@ -69,7 +69,8 @@ MovieView.propTypes = {
     Director: propTypes.shape({
       Name: propTypes.string.isRequired
     }),
-  }).isRequired
+  }),
+  onBackClick: propTypes.func.isRequired
 };
 
 export default MovieView;
