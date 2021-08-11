@@ -23142,7 +23142,7 @@ class MainView extends _reactDefault.default.Component {
                 return(/*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Col, {
                     md: 8
                 }, /*#__PURE__*/ _reactDefault.default.createElement(_genreViewDefault.default, {
-                    movies: movies.find((m)=>m.Genre.Name === match.params.name
+                    movie: movies.find((m)=>m.Genre.Name === match.params.name
                     ),
                     onBackClick: ()=>history.goBack()
                 })));
@@ -27699,7 +27699,7 @@ function LoginView(props) {
         },
         __self: this
     }, /*#__PURE__*/ _reactDefault.default.createElement(_formDefault.default.Group, {
-        calssName: "postion-relative mb-3",
+        className: "postion-relative mb-3",
         controlId: "formGroupUsername",
         __source: {
             fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\login-view\\login-view.jsx",

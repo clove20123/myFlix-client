@@ -35,7 +35,7 @@ function LoginView(props) {
     <Form className="LoginForm">
       <Row>
         <Col>
-          <Form.Group calssName="postion-relative mb-3" controlId="formGroupUsername">
+          <Form.Group className="postion-relative mb-3" controlId="formGroupUsername">
             <Form.Label>Username: </Form.Label>
             <Form.Control type="text" placeholder="Enter Name" value={Username} onChange={(e) => setUsername(e.target.value)} />
           </Form.Group>
