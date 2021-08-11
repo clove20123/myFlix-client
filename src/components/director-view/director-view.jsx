@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import { Button, Row, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -34,12 +34,18 @@ class DirectorView extends React.Component {
 }
 
 DirectorView.propTypes = {
-  director: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    bio: PropTypes.string.isRequired,
-    birth: PropTypes.string.isRequired
+  movie: propTypes.shape({
+    Title: propTypes.string.isRequired,
+    Description: propTypes.string.isRequired,
+    Featured: propTypes.bool,
+    Genre: propTypes.shape({
+      Name: propTypes.string.isRequired
+    }),
+    Director: propTypes.shape({
+      Name: propTypes.string.isRequired
+    }),
   }),
-  onBackClick: PropTypes.func.isRequired
+  onBackClick: propTypes.func.isRequired
 };
 
 export default DirectorView;
