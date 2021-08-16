@@ -19,8 +19,21 @@ componentWillUnmount() {
   document.removeEventListener('keypress', this.keypressCallback);
 }
 
+addFavorite(movie) {
+  let token = localStorage.getItem('token');
+axios.post(`https://my-movie-api-20123.herokuapp.com/users/${localStorage.getItem('user')}/Movies/${movie._id}`, {
+headers: { Authorization: `Bearer ${token}` }
+})
+.then(response => {
+  console.log(response.data)
+})
+.catch(error => {
+  console.log(error)
+})}
+
 render() {
   const { movie, onBackClick } = this.props;
+
 
   return (
     <div className="movie-view">
@@ -48,7 +61,7 @@ render() {
         </Link>
         <span className="value">{movie.Director.Name}</span>
       </div>
-      <Button variant='danger' className="fav-button" value={movie._id} onClick={(e) => this.addFavorite(e, movie)}>
+      <Button variant='danger' className="fav-button" value={movie._id} onClick={ ( ) => this.addFavorite(movie)}>
         Add to Favorites
       </Button>
       <Button variant="primary" onClick={() => { onBackClick(null); }}>Back</Button>

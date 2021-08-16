@@ -17,15 +17,13 @@ function RegistrationView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(Username, Password, Email, Birthday);
-  };
-
-  axios.post('https://my-movie-api-20123.herokuapp.com/users', {
+    axios.post('https://my-movie-api-20123.herokuapp.com/users', {
     Username: Username,
     Password: Password,
     Email: Email,
     Birthday: Birthday
   })
+
   .then(response => {
     const data = response.data;
     console.log(data);
@@ -34,6 +32,10 @@ function RegistrationView(props) {
   .catch(e => {
     console.log('error registering the user')
   });
+  };
+
+  
+  
 
   return (
     <Form className="RegistrationForm" onSubmit={handleSubmit}>
