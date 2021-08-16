@@ -32087,7 +32087,8 @@ MovieView.propTypes = {
         Director: _propTypesDefault.default.shape({
             Name: _propTypesDefault.default.string.isRequired
         })
-    }).isRequired
+    }),
+    onBackClick: _propTypesDefault.default.func.isRequired
 };
 exports.default = MovieView;
 
@@ -32237,10 +32238,16 @@ class DirectorView extends _reactDefault.default.Component {
     }
 }
 DirectorView.propTypes = {
-    director: _propTypesDefault.default.shape({
-        name: _propTypesDefault.default.string.isRequired,
-        bio: _propTypesDefault.default.string.isRequired,
-        birth: _propTypesDefault.default.string.isRequired
+    movie: _propTypesDefault.default.shape({
+        Title: _propTypesDefault.default.string.isRequired,
+        Description: _propTypesDefault.default.string.isRequired,
+        Featured: _propTypesDefault.default.bool,
+        Genre: _propTypesDefault.default.shape({
+            Name: _propTypesDefault.default.string.isRequired
+        }),
+        Director: _propTypesDefault.default.shape({
+            Name: _propTypesDefault.default.string.isRequired
+        })
     }),
     onBackClick: _propTypesDefault.default.func.isRequired
 };
@@ -41813,14 +41820,12 @@ helpers.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "GenreView", ()=>GenreView
-);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _reactBootstrap = require("react-bootstrap");
-var _reactBootstrapDefault = parcelHelpers.interopDefault(_reactBootstrap);
+var _button = require("react-bootstrap/Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
 class GenreView extends _reactDefault.default.Component {
     render() {
         const { movie , onBackClick  } = this.props;
@@ -41865,7 +41870,7 @@ class GenreView extends _reactDefault.default.Component {
                 lineNumber: 21
             },
             __self: this
-        }, movie.Genre.Description)), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrapDefault.default, {
+        }, movie.Genre.Description)), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
             variant: "primary",
             onClick: ()=>{
                 onBackClick(null);
@@ -41879,10 +41884,18 @@ class GenreView extends _reactDefault.default.Component {
     }
 }
 GenreView.propTypes = {
-    genre: _propTypesDefault.default.shape({
-        Name: _propTypesDefault.default.string.isRequired,
-        Description: _propTypesDefault.default.string.isRequired
-    }).isRequired
+    movie: _propTypesDefault.default.shape({
+        Title: _propTypesDefault.default.string.isRequired,
+        Description: _propTypesDefault.default.string.isRequired,
+        Featured: _propTypesDefault.default.bool,
+        Genre: _propTypesDefault.default.shape({
+            Name: _propTypesDefault.default.string.isRequired
+        }),
+        Director: _propTypesDefault.default.shape({
+            Name: _propTypesDefault.default.string.isRequired
+        })
+    }),
+    onBackClick: _propTypesDefault.default.func.isRequired
 };
 exports.default = GenreView;
 
@@ -41891,7 +41904,7 @@ exports.default = GenreView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","prop-types":"4dfy5","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","react-bootstrap":"4n7hB"}],"4imCt":[function(require,module,exports) {
+},{"react":"3b2NM","prop-types":"4dfy5","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","react-bootstrap/Button":"1ru0l"}],"4imCt":[function(require,module,exports) {
 var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
