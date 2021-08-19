@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { Button, Card, CardDeck, Form, Row } from 'react-bootstrap';
 import './profile-view.scss';
 
@@ -9,11 +10,11 @@ class ProfileView extends React.Component {
     super();
 
     this.state = {
-      Name: null,
+      
       Username: null,
       Password: null,
       Email: null,
-      Birthdate: null,
+      Birthday: null,
       FavoriteMovies: [],
     };
   }
@@ -34,11 +35,11 @@ class ProfileView extends React.Component {
     })
       .then((response) => {
         this.setState({
-          Name: response.data.Name,
+         
           Username: response.data.Username,
           Password: response.data.Password,
           Email: response.data.Email,
-          Birthdate: response.data.Birthdate,
+          Birthday: response.data.Birthday,
           FavoriteMovies: response.data.FavoriteMovies,
         });
       })
@@ -66,18 +67,15 @@ class ProfileView extends React.Component {
       })
   }
 
-  handleUpdate(e, newName, newUsername, newPassword, newEmail, newBirthdate) {
-    this.setState({
-      validated: null,
-    });
+  handleUpdate(e, newUsername, newPassword, newEmail, newBirthday) {
+    
 
     const form = e.currentTarget;
     if (form.checkValidity() === false) {
       e.preventDefault();
       e.stopPropagation();
-      this.setState({
-        validated: true,
-      });
+      
+
       return;
     }
     e.preventDefault();
@@ -86,23 +84,23 @@ class ProfileView extends React.Component {
     const username = localStorage.getItem('user');
 
     axios.put(`https://my-movie-api-20123.herokuapp.com/users/${username}`, {
+       
+      Username: newUsername,
+      Password: newPassword,
+      Email: newEmail,
+      Birthday: newBirthday,
+    }, {
       headers: { Authorization: `Bearer ${token}` },
-      data: {
-        Name: newName ? newName : this.state.Name,
-        Username: newUsername ? newUsername : this.state.Username,
-        Password: newPassword ? newPassword : this.state.Password,
-        Email: newEmail ? newEmail : this.state.Email,
-        Birthdate: newBirthdate ? newBirthdate : this.state.Birthdate,
-      },
+      
     })
       .then((response) => {
         alert('Saved Changes');
         this.setState({
-          Name: response.data.Name,
+          
           Username: response.data.Username,
           Password: response.data.Password,
           Email: response.data.Email,
-          Birthdate: response.data.Birthdate,
+          Birthday: response.data.Birthday,
         });
         localStorage.setItem('user', this.state.Username);
         window.open(`/users/${username}`, '_self');
@@ -111,25 +109,31 @@ class ProfileView extends React.Component {
         console.log(error);
       });
   }
-  setName(input) {
-    this.Name = input;
-  }
+  
 
-  setUsername(input) {
-    this.Username = input;
-  }
+  setUsername(event) {
+    this.setState({
+      Username: event.target.value
+  });
+}
 
-  setPassword(input) {
-    this.Password = input;
-  }
+  setPassword(event) {
+    this.setState({
+      Password: event.target.value
+  });
+}
 
-  setEmail(input) {
-    this.Email = input;
-  }
+  setEmail(event) {
+    this.setState({
+      Email: event.target.value
+  });
+}
 
-  setBirthdate(input) {
-    this.Birthdate = input;
-  }
+  setBirthday(event) {
+    this.setState({
+      Birthday: event.target.value
+  });
+}
 
   handleDeleteUser(e) {
     e.preventDefault();
@@ -177,36 +181,33 @@ class ProfileView extends React.Component {
 
           <h1 className="section">Update Profile</h1>
           <Card.Body>
-            <Form noValidate validated={validated} className="update-form" onSubmit={(e) => this.handleUpdate(e, this.Name, this.Username, this.Password, this.Email, this.Birthdate)}>
+            <Form  className="update-form">
 
-              <Form.Group controlId="formName">
-                <Form.Label className="form-label">Name</Form.Label>
-                <Form.Control type="text" placeholder="Change Name" onChange={(e) => this.setName(e.target.value)} />
-              </Form.Group>
+              
 
               <Form.Group controlId="formBasicUsername">
                 <Form.Label className="form-label">Username</Form.Label>
-                <Form.Control type="text" placeholder="Change Username" onChange={(e) => this.setUsername(e.target.value)} />
+                <Form.Control type="text" placeholder="Change Username" onChange={(event) => this.setUsername(event.target.value)} />
               </Form.Group>
 
               <Form.Group controlId="formBasicPassword">
                 <Form.Label className="form-label">
                   Password<span className="required">*</span>
                 </Form.Label>
-                <Form.Control type="password" placeholder="New Password" onChange={(e) => this.setPassword(e.target.value)} />
+                <Form.Control type="password" placeholder="New Password" onChange={(event) => this.setPassword(event.target.value)} />
               </Form.Group>
 
               <Form.Group controlId="formBasicEmail">
                 <Form.Label className="form-label">Email</Form.Label>
-                <Form.Control type="email" placeholder="Change Email" onChange={(e) => this.setEmail(e.target.value)} />
+                <Form.Control type="email" placeholder="Change Email" onChange={(event) => this.setEmail(event.target.value)} />
               </Form.Group>
 
               <Form.Group controlId="formBasicBirthday">
-                <Form.Label className="form-label">Birthdate</Form.Label>
-                <Form.Control type="date" placeholder="Change Birthdate" onChange={(e) => this.setBirthdate(e.target.value)} />
+                <Form.Label className="form-label">Birthday</Form.Label>
+                <Form.Control type="date" placeholder="Change Birthday" onChange={(eevent) => this.setBirthday(event.target.value)} />
               </Form.Group>
 
-              <Button variant='danger' type="submit">
+              <Button variant='danger' type="submit"  onSubmit={(e) => this.handleUpdate(e, this.state.Username, this.state.Password, this.state.Email, this.state.Birthday)}>
                 Update
               </Button>
 

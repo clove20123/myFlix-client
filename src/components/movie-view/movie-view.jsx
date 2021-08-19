@@ -20,15 +20,15 @@ componentWillUnmount() {
 }
 
 addFavorite(movie) {
-  let token = localStorage.getItem('token');
-axios.post(`https://my-movie-api-20123.herokuapp.com/users/${localStorage.getItem('user')}/Movies/${movie._id}`, {
+let token = localStorage.getItem('token');
+axios.post(`https://my-movie-api-20123.herokuapp.com/users/${localStorage.getItem('user')}/Movies/${movie._id}`,{},  {
 headers: { Authorization: `Bearer ${token}` }
 })
 .then(response => {
   console.log(response.data)
 })
-.catch(error => {
-  console.log(error)
+.catch((e) => {
+  console.log(e);
 })}
 
 render() {
