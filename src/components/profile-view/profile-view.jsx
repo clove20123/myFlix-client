@@ -204,7 +204,7 @@ class ProfileView extends React.Component {
 
               <Form.Group controlId="formBasicBirthday">
                 <Form.Label className="form-label">Birthday</Form.Label>
-                <Form.Control type="date" placeholder="Change Birthday" onChange={(eevent) => this.setBirthday(event.target.value)} />
+                <Form.Control type="date" placeholder="Change Birthday" onChange={(event) => this.setBirthday(event.target.value)} />
               </Form.Group>
 
               <Button variant='danger' type="submit"  onSubmit={(e) => this.handleUpdate(e, this.state.Username, this.state.Password, this.state.Email, this.state.Birthday)}>
