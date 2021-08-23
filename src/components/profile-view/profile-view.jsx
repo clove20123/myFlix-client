@@ -113,25 +113,25 @@ class ProfileView extends React.Component {
 
   setUsername(event) {
     this.setState({
-      Username: event.target.value
+      Username: event
   });
 }
 
   setPassword(event) {
     this.setState({
-      Password: event.target.value
+      Password: event
   });
 }
 
   setEmail(event) {
     this.setState({
-      Email: event.target.value
+      Email: event
   });
 }
 
   setBirthday(event) {
     this.setState({
-      Birthday: event.target.value
+      Birthday: event
   });
 }
 
@@ -187,24 +187,24 @@ class ProfileView extends React.Component {
 
               <Form.Group controlId="formBasicUsername">
                 <Form.Label className="form-label">Username</Form.Label>
-                <Form.Control type="text" placeholder="Change Username" onChange={(event) => this.setUsername(event.target.value)} />
+                <Form.Control type="text" placeholder="Change Username" onChange={(event) => this.setUsername(event)} />
               </Form.Group>
 
               <Form.Group controlId="formBasicPassword">
                 <Form.Label className="form-label">
                   Password<span className="required">*</span>
                 </Form.Label>
-                <Form.Control type="password" placeholder="New Password" onChange={(event) => this.setPassword(event.target.value)} />
+                <Form.Control type="password" placeholder="New Password" onChange={(event) => this.setPassword(event)} />
               </Form.Group>
 
               <Form.Group controlId="formBasicEmail">
                 <Form.Label className="form-label">Email</Form.Label>
-                <Form.Control type="email" placeholder="Change Email" onChange={(event) => this.setEmail(event.target.value)} />
+                <Form.Control type="email" placeholder="Change Email" onChange={(event) => this.setEmail(event)} />
               </Form.Group>
 
               <Form.Group controlId="formBasicBirthday">
                 <Form.Label className="form-label">Birthday</Form.Label>
-                <Form.Control type="date" placeholder="Change Birthday" onChange={(event) => this.setBirthday(event.target.value)} />
+                <Form.Control type="date" placeholder="Change Birthday" onChange={(event) => this.setBirthday(event)} />
               </Form.Group>
 
               <Button variant='danger' type="submit"  onSubmit={(e) => this.handleUpdate(e, this.state.Username, this.state.Password, this.state.Email, this.state.Birthday)}>

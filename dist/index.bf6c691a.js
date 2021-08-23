@@ -42016,22 +42016,22 @@ class ProfileView extends _reactDefault.default.Component {
     }
     setUsername(event) {
         this.setState({
-            Username: event.target.value
+            Username: event
         });
     }
     setPassword(event) {
         this.setState({
-            Password: event.target.value
+            Password: event
         });
     }
     setEmail(event) {
         this.setState({
-            Email: event.target.value
+            Email: event
         });
     }
     setBirthday(event) {
         this.setState({
-            Birthday: event.target.value
+            Birthday: event
         });
     }
     handleDeleteUser(e) {
@@ -42140,7 +42140,7 @@ class ProfileView extends _reactDefault.default.Component {
         }, "Username"), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Control, {
             type: "text",
             placeholder: "Change Username",
-            onChange: (event)=>this.setUsername(event.target.value)
+            onChange: (event)=>this.setUsername(event)
             ,
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
@@ -42171,7 +42171,7 @@ class ProfileView extends _reactDefault.default.Component {
         }, "*")), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Control, {
             type: "password",
             placeholder: "New Password",
-            onChange: (event)=>this.setPassword(event.target.value)
+            onChange: (event)=>this.setPassword(event)
             ,
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
@@ -42195,7 +42195,7 @@ class ProfileView extends _reactDefault.default.Component {
         }, "Email"), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Control, {
             type: "email",
             placeholder: "Change Email",
-            onChange: (event)=>this.setEmail(event.target.value)
+            onChange: (event)=>this.setEmail(event)
             ,
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
@@ -42219,7 +42219,7 @@ class ProfileView extends _reactDefault.default.Component {
         }, "Birthday"), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Control, {
             type: "date",
             placeholder: "Change Birthday",
-            onChange: (eevent)=>this.setBirthday(event.target.value)
+            onChange: (event)=>this.setBirthday(event)
             ,
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
