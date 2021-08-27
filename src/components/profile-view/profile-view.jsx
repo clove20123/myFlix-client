@@ -81,7 +81,7 @@ class ProfileView extends React.Component {
     e.preventDefault();
 
     const token = localStorage.getItem('token');
-    const username = localStorage.getItem('user');
+    let username = localStorage.getItem('user');
 
     axios.put(`https://my-movie-api-20123.herokuapp.com/users/${username}`, {
        
@@ -103,7 +103,8 @@ class ProfileView extends React.Component {
           Birthday: response.data.Birthday,
         });
         localStorage.setItem('user', this.state.Username);
-        window.open(`/users/${username}`, '_self');
+        username = localStorage.getItem('user')
+        window.location.pathname=`/users/${username}`
       })
       .catch(function (error) {
         console.log(error);
@@ -113,25 +114,25 @@ class ProfileView extends React.Component {
 
   setUsername(event) {
     this.setState({
-      Username: event
+      Username: event.target.value
   });
 }
 
   setPassword(event) {
     this.setState({
-      Password: event
+      Password: event.target.value
   });
 }
 
   setEmail(event) {
     this.setState({
-      Email: event
+      Email: event.target.value
   });
 }
 
   setBirthday(event) {
     this.setState({
-      Birthday: event
+      Birthday: event.target.value
   });
 }
 
@@ -181,7 +182,7 @@ class ProfileView extends React.Component {
 
           <h1 className="section">Update Profile</h1>
           <Card.Body>
-            <Form  className="update-form">
+            <Form  className="update-form" onSubmit={(e) => this.handleUpdate(e, this.state.Username, this.state.Password, this.state.Email, this.state.Birthday)}>
 
               
 
@@ -207,7 +208,7 @@ class ProfileView extends React.Component {
                 <Form.Control type="date" placeholder="Change Birthday" onChange={(event) => this.setBirthday(event)} />
               </Form.Group>
 
-              <Button variant='danger' type="submit"  onSubmit={(e) => this.handleUpdate(e, this.state.Username, this.state.Password, this.state.Email, this.state.Birthday)}>
+              <Button variant='danger' type="submit"  >
                 Update
               </Button>
 
