@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { Button, Card, CardDeck, Form, Row } from 'react-bootstrap';
 import './profile-view.scss';
+import { connect } from 'react-redux';
+
+import { setUser } from '../../actions/actions';
 
 class ProfileView extends React.Component {
   constructor() {
@@ -33,19 +36,14 @@ class ProfileView extends React.Component {
     axios.get(`https://my-movie-api-20123.herokuapp.com/users/${username}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
-      .then((response) => {
-        this.setState({
-         
-          Username: response.data.Username,
-          Password: response.data.Password,
-          Email: response.data.Email,
-          Birthday: response.data.Birthday,
-          FavoriteMovies: response.data.FavoriteMovies,
-        });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    .then(response => {
+      this.props.setUser(response.data);
+
+      
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
 
@@ -95,13 +93,11 @@ class ProfileView extends React.Component {
     })
       .then((response) => {
         alert('Saved Changes');
-        this.setState({
+        
+          this.props.setUser(response.data);
+    
           
-          Username: response.data.Username,
-          Password: response.data.Password,
-          Email: response.data.Email,
-          Birthday: response.data.Birthday,
-        });
+       
         localStorage.setItem('user', this.state.Username);
         username = localStorage.getItem('user')
         window.location.pathname=`/users/${username}`
@@ -113,27 +109,26 @@ class ProfileView extends React.Component {
   
 
   setUsername(event) {
-    this.setState({
-      Username: event.target.value
-  });
+    
+      this.Username = event
+  
 }
 
   setPassword(event) {
-    this.setState({
-      Password: event.target.value
-  });
+   
+      this.Password = event
+  
 }
 
   setEmail(event) {
-    this.setState({
-      Email: event.target.value
-  });
+      this.Email = event
+  
 }
 
   setBirthday(event) {
-    this.setState({
-      Birthday: event.target.value
-  });
+  
+      this.Birthday = event
+
 }
 
   handleDeleteUser(e) {
@@ -182,30 +177,30 @@ class ProfileView extends React.Component {
 
           <h1 className="section">Update Profile</h1>
           <Card.Body>
-            <Form  className="update-form" onSubmit={(e) => this.handleUpdate(e, this.state.Username, this.state.Password, this.state.Email, this.state.Birthday)}>
+            <Form  className="update-form" onSubmit={(e) => this.handleUpdate(e, this.Username, this.Password, this.Email, this.Birthday)}>
 
               
 
               <Form.Group controlId="formBasicUsername">
                 <Form.Label className="form-label">Username</Form.Label>
-                <Form.Control type="text" placeholder="Change Username" onChange={(event) => this.setUsername(event)} />
+                <Form.Control type="text" placeholder="Change Username" onChange={(event) => this.setUsername(event.target.value)} />
               </Form.Group>
 
               <Form.Group controlId="formBasicPassword">
                 <Form.Label className="form-label">
                   Password<span className="required">*</span>
                 </Form.Label>
-                <Form.Control type="password" placeholder="New Password" onChange={(event) => this.setPassword(event)} />
+                <Form.Control type="password" placeholder="New Password" onChange={(event) => this.setPassword(event.target.value)} />
               </Form.Group>
 
               <Form.Group controlId="formBasicEmail">
                 <Form.Label className="form-label">Email</Form.Label>
-                <Form.Control type="email" placeholder="Change Email" onChange={(event) => this.setEmail(event)} />
+                <Form.Control type="email" placeholder="Change Email" onChange={(event) => this.setEmail(event.target.value)} />
               </Form.Group>
 
               <Form.Group controlId="formBasicBirthday">
                 <Form.Label className="form-label">Birthday</Form.Label>
-                <Form.Control type="date" placeholder="Change Birthday" onChange={(event) => this.setBirthday(event)} />
+                <Form.Control type="date" placeholder="Change Birthday" onChange={(event) => this.setBirthday(event.target.value)} />
               </Form.Group>
 
               <Button variant='danger' type="submit"  >
@@ -227,18 +222,12 @@ class ProfileView extends React.Component {
   }
 }
 
-ProfileView.propTypes = {
-  user: PropTypes.shape({
-    FavoriteMovies: PropTypes.arrayOf(
-      PropTypes.shape({
-        _id: PropTypes.string.isRequired,
-        Title: PropTypes.string.isRequired,
-      })
-    ),
-    Username: PropTypes.string.isRequired,
-    Email: PropTypes.string.isRequired,
-    Birthdate: PropTypes.string,
-  }),
-};
+let mapStateToProps = state => {
+  return {
+    user: state.user,
+    movies: state.movies
+  }
+}
 
-export default ProfileView;
+export default connect(mapStateToProps, { setUser })(ProfileView);
+
