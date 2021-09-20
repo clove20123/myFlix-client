@@ -98,7 +98,7 @@ class ProfileView extends React.Component {
     
           
        
-        localStorage.setItem('user', this.state.Username);
+        localStorage.setItem('user', this.props.user.Username);
         username = localStorage.getItem('user')
         window.location.pathname=`/users/${username}`
       })

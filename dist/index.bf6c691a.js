@@ -41914,7 +41914,7 @@ class ProfileView extends _reactDefault.default.Component {
         }).then((response)=>{
             alert('Saved Changes');
             this.props.setUser(response.data);
-            localStorage.setItem('user', this.state.Username);
+            localStorage.setItem('user', this.props.user.Username);
             username = localStorage.getItem('user');
             window.location.pathname = `/users/${username}`;
         }).catch(function(error) {
