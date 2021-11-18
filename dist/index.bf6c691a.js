@@ -151,11 +151,11 @@ window.$RefreshSig$ = function() {
     };
 };
 
-},{"react-refresh/runtime":"tafRQ"}],"tafRQ":[function(require,module,exports) {
+},{"react-refresh/runtime":"11zLv"}],"11zLv":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-refresh-runtime.development.js');
 
-},{"./cjs/react-refresh-runtime.development.js":"i39xj"}],"i39xj":[function(require,module,exports) {
+},{"./cjs/react-refresh-runtime.development.js":"1m8x7"}],"1m8x7":[function(require,module,exports) {
 /** @license React v0.9.0
  * react-refresh-runtime.development.js
  *
@@ -859,7 +859,7 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
 }
 
 },{}],"50ops":[function(require,module,exports) {
-var helpers = require("../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var helpers = require("../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 helpers.prelude(module);
@@ -917,7 +917,7 @@ _reactDomDefault.default.render(/*#__PURE__*/ _reactDefault.default.createElemen
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","bootstrap/dist/css/bootstrap.min.css":"3OZ0H","react-dom":"2sg1U","react-bootstrap/Container":"3Mt3t","./components/main-view/main-view":"1PF64","./index.scss":"JOw5y","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","redux":"7panR","react-redux":"7GDa4","./reducers/reducers":"2736c"}],"3b2NM":[function(require,module,exports) {
+},{"react":"3b2NM","bootstrap/dist/css/bootstrap.min.css":"3OZ0H","react-dom":"2sg1U","react-bootstrap/Container":"3Mt3t","./components/main-view/main-view":"1PF64","./index.scss":"JOw5y","@parcel/transformer-js/src/esmodule-helpers.js":"WDXrg","redux":"7panR","react-redux":"7GDa4","./reducers/reducers":"2736c","../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7zzZu"}],"3b2NM":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react.development.js');
 
@@ -22859,7 +22859,7 @@ module.exports = require('./cjs/react-jsx-runtime.development.js');
 })();
 
 },{"react":"3b2NM","object-assign":"3eM6x"}],"1PF64":[function(require,module,exports) {
-var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var helpers = require("../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 helpers.prelude(module);
@@ -22896,23 +22896,20 @@ class MainView extends _reactDefault.default.Component {
     constructor(){
         super();
         this.state = {
-            user: null
         };
     }
     componentDidMount() {
         let accessToken = localStorage.getItem('token');
-        if (accessToken !== null) {
-            this.setState({
-                user: localStorage.getItem('user')
-            });
-            this.getMovies(accessToken);
-        }
+        //if(accessToken !== null){
+        //if(!("Username" in this.props.user)){
+        this.props.setUser(localStorage.getItem('user'));
+        //}
+        //}
+        this.getMovies(accessToken);
     }
     onLoggedIn(authData) {
         console.log(authData);
-        this.setState({
-            user: authData.user.Username
-        });
+        this.props.setUser(authData.user.Username);
         localStorage.setItem('token', authData.token);
         localStorage.setItem('user', authData.user.Username);
         this.getMovies(authData.token);
@@ -22920,9 +22917,7 @@ class MainView extends _reactDefault.default.Component {
     onLogout() {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
-        this.setState({
-            user: null
-        });
+        this.props.setUser(null);
         console.log("logout successful");
         window.open("/", "_self");
     }
@@ -22949,7 +22944,7 @@ class MainView extends _reactDefault.default.Component {
     }
     render() {
         let { movies  } = this.props;
-        let { user  } = this.state;
+        let { user  } = this.props;
         return(/*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
@@ -23196,7 +23191,7 @@ exports.default = _reactRedux.connect(mapStateToProps, {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","axios":"7rA65","./main-view.scss":"27MIz","react-router-dom":"1PMSK","../login-view/login-view":"jtwvq","../registration-view/registration-view":"37jdh","../movie-view/movie-view":"6nU5P","../director-view/director-view":"2KAKg","../genre-view/genre-view":"hZU4V","../profile-view/profile-view":"4imCt","react-bootstrap":"4n7hB","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","react-redux":"7GDa4","../../actions/actions":"5S6cN","../movies-list/movies-list":"1D2cP"}],"7rA65":[function(require,module,exports) {
+},{"react":"3b2NM","axios":"7rA65","./main-view.scss":"27MIz","react-router-dom":"1PMSK","../login-view/login-view":"jtwvq","../registration-view/registration-view":"37jdh","../movie-view/movie-view":"6nU5P","../director-view/director-view":"2KAKg","../genre-view/genre-view":"hZU4V","../profile-view/profile-view":"4imCt","react-bootstrap":"4n7hB","@parcel/transformer-js/src/esmodule-helpers.js":"WDXrg","react-redux":"7GDa4","../../actions/actions":"5S6cN","../movies-list/movies-list":"1D2cP","../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7zzZu"}],"7rA65":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"4qfhW"}],"4qfhW":[function(require,module,exports) {
@@ -23846,7 +23841,7 @@ utils.forEach([
 });
 module.exports = defaults;
 
-},{"process":"2WqzV","./utils":"7J9rV","./helpers/normalizeHeaderName":"5yMqL","./adapters/xhr":"6pJqL","./adapters/http":"6pJqL"}],"2WqzV":[function(require,module,exports) {
+},{"process":"nMHnX","./utils":"7J9rV","./helpers/normalizeHeaderName":"5yMqL","./adapters/xhr":"6pJqL","./adapters/http":"6pJqL"}],"nMHnX":[function(require,module,exports) {
 // shim for using process in browser
 var process = module.exports = {
 };
@@ -27642,7 +27637,7 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 module.exports = hoistNonReactStatics;
 
 },{"react-is":"68QIU"}],"jtwvq":[function(require,module,exports) {
-var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var helpers = require("../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 helpers.prelude(module);
@@ -27812,7 +27807,7 @@ $RefreshReg$(_c, "LoginView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","./login-view.scss":"6Oouh","prop-types":"4dfy5","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l","react-bootstrap/Row":"3fzwD","react-bootstrap/Col":"2D0r8","react-bootstrap/Container":"3Mt3t","react-bootstrap/Navbar":"3qLFd","axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr"}],"6Oouh":[function() {},{}],"6A5ko":[function(require,module,exports) {
+},{"react":"3b2NM","./login-view.scss":"6Oouh","prop-types":"4dfy5","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l","react-bootstrap/Row":"3fzwD","react-bootstrap/Col":"2D0r8","react-bootstrap/Container":"3Mt3t","react-bootstrap/Navbar":"3qLFd","axios":"7rA65","@parcel/transformer-js/src/esmodule-helpers.js":"WDXrg","../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7zzZu"}],"6Oouh":[function() {},{}],"6A5ko":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -31158,7 +31153,7 @@ exports.makeEventKey = makeEventKey;
 var _default = SelectableContext;
 exports.default = _default;
 
-},{"react":"3b2NM"}],"77zDO":[function(require,module,exports) {
+},{"react":"3b2NM"}],"WDXrg":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -31190,7 +31185,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"3Oiqr":[function(require,module,exports) {
+},{}],"7zzZu":[function(require,module,exports) {
 "use strict";
 var Refresh = require('react-refresh/runtime');
 function debounce(func, delay) {
@@ -31310,8 +31305,8 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"tafRQ"}],"37jdh":[function(require,module,exports) {
-var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react-refresh/runtime":"11zLv"}],"37jdh":[function(require,module,exports) {
+var helpers = require("../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 helpers.prelude(module);
@@ -31536,8 +31531,8 @@ $RefreshReg$(_c, "RegistrationView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","./registration-view.scss":"1BCRU","axios":"7rA65","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l","prop-types":"4dfy5","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr"}],"1BCRU":[function() {},{}],"6nU5P":[function(require,module,exports) {
-var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react":"3b2NM","./registration-view.scss":"1BCRU","axios":"7rA65","react-bootstrap/Form":"6A5ko","react-bootstrap/Button":"1ru0l","prop-types":"4dfy5","@parcel/transformer-js/src/esmodule-helpers.js":"WDXrg","../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7zzZu"}],"1BCRU":[function() {},{}],"6nU5P":[function(require,module,exports) {
+var helpers = require("../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 helpers.prelude(module);
@@ -31744,7 +31739,7 @@ exports.default = MovieView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","prop-types":"4dfy5","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","react-bootstrap/Button":"1ru0l","react-bootstrap/Badge":"2aFSj","react-router-dom":"1PMSK","axios":"7rA65"}],"2aFSj":[function(require,module,exports) {
+},{"react":"3b2NM","prop-types":"4dfy5","@parcel/transformer-js/src/esmodule-helpers.js":"WDXrg","react-bootstrap/Button":"1ru0l","react-bootstrap/Badge":"2aFSj","react-router-dom":"1PMSK","axios":"7rA65","../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7zzZu"}],"2aFSj":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -31798,7 +31793,7 @@ exports.default = _default;
 module.exports = exports.default;
 
 },{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S","react/jsx-runtime":"7jBZW"}],"2KAKg":[function(require,module,exports) {
-var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var helpers = require("../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 helpers.prelude(module);
@@ -31905,7 +31900,7 @@ exports.default = DirectorView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","prop-types":"4dfy5","react-bootstrap":"4n7hB","react-router-dom":"1PMSK","./director-view.scss":"7KOj3","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr"}],"4n7hB":[function(require,module,exports) {
+},{"react":"3b2NM","prop-types":"4dfy5","react-bootstrap":"4n7hB","react-router-dom":"1PMSK","./director-view.scss":"7KOj3","@parcel/transformer-js/src/esmodule-helpers.js":"WDXrg","../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7zzZu"}],"4n7hB":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -41739,7 +41734,7 @@ exports.default = _default;
 module.exports = exports.default;
 
 },{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","classnames":"5aJRc","react":"3b2NM","prop-types-extra/lib/isRequiredForA11y":"4XrEc","./ThemeProvider":"4rz1S","react/jsx-runtime":"7jBZW"}],"7KOj3":[function() {},{}],"hZU4V":[function(require,module,exports) {
-var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var helpers = require("../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 helpers.prelude(module);
@@ -41831,8 +41826,8 @@ exports.default = GenreView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","prop-types":"4dfy5","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","react-bootstrap/Button":"1ru0l"}],"4imCt":[function(require,module,exports) {
-var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react":"3b2NM","prop-types":"4dfy5","@parcel/transformer-js/src/esmodule-helpers.js":"WDXrg","react-bootstrap/Button":"1ru0l","../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7zzZu"}],"4imCt":[function(require,module,exports) {
+var helpers = require("../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 helpers.prelude(module);
@@ -41873,7 +41868,14 @@ class ProfileView extends _reactDefault.default.Component {
                 Authorization: `Bearer ${token}`
             }
         }).then((response)=>{
-            this.props.setUser(response.data);
+            this.setState({
+                Name: response.data.Name,
+                Username: response.data.Username,
+                Password: response.data.Password,
+                Email: response.data.Email,
+                Birthdate: response.data.Birthdate,
+                FavoriteMovies: response.data.FavoriteMovies
+            });
         }).catch(function(error) {
             console.log(error);
         });
@@ -41951,46 +41953,46 @@ class ProfileView extends _reactDefault.default.Component {
         });
     }
     render() {
-        const { FavoriteMovies , validated  } = this.state;
+        const { FavoriteMovies  } = this.state;
         const { movies  } = this.props;
         return(/*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Row, {
             className: "profile-view",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 159
+                lineNumber: 164
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card, {
             className: "profile-card",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 160
+                lineNumber: 165
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("h2", {
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 161
+                lineNumber: 166
             },
             __self: this
         }, "Your Favorites Movies"), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card.Body, {
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 162
+                lineNumber: 167
             },
             __self: this
         }, FavoriteMovies.length === 0 && /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "text-center",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 163
+                lineNumber: 168
             },
             __self: this
         }, "Empty."), /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "favorites-movies ",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 165
+                lineNumber: 170
             },
             __self: this
         }, FavoriteMovies.length > 0 && movies.map((movie)=>{
@@ -41998,7 +42000,7 @@ class ProfileView extends _reactDefault.default.Component {
             )) return(/*#__PURE__*/ _reactDefault.default.createElement("h1", {
                 __source: {
                     fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                    lineNumber: 170
+                    lineNumber: 175
                 },
                 __self: this
             }, movie.Title));
@@ -42006,13 +42008,13 @@ class ProfileView extends _reactDefault.default.Component {
             className: "section",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 178
+                lineNumber: 183
             },
             __self: this
         }, "Update Profile"), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card.Body, {
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 179
+                lineNumber: 184
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form, {
@@ -42021,35 +42023,11 @@ class ProfileView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 180
+                lineNumber: 185
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Group, {
             controlId: "formBasicUsername",
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 184
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Label, {
-            className: "form-label",
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 185
-            },
-            __self: this
-        }, "Username"), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Control, {
-            type: "text",
-            placeholder: "Change Username",
-            onChange: (event)=>this.setUsername(event.target.value)
-            ,
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 186
-            },
-            __self: this
-        })), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Group, {
-            controlId: "formBasicPassword",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
                 lineNumber: 189
@@ -42062,11 +42040,35 @@ class ProfileView extends _reactDefault.default.Component {
                 lineNumber: 190
             },
             __self: this
+        }, "Username"), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Control, {
+            type: "text",
+            placeholder: "Change Username",
+            onChange: (event)=>this.setUsername(event.target.value)
+            ,
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
+                lineNumber: 191
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Group, {
+            controlId: "formBasicPassword",
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
+                lineNumber: 194
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Label, {
+            className: "form-label",
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
+                lineNumber: 195
+            },
+            __self: this
         }, "Password", /*#__PURE__*/ _reactDefault.default.createElement("span", {
             className: "required",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 191
+                lineNumber: 196
             },
             __self: this
         }, "*")), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Control, {
@@ -42076,35 +42078,11 @@ class ProfileView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 193
-            },
-            __self: this
-        })), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Group, {
-            controlId: "formBasicEmail",
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 196
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Label, {
-            className: "form-label",
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 197
-            },
-            __self: this
-        }, "Email"), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Control, {
-            type: "email",
-            placeholder: "Change Email",
-            onChange: (event)=>this.setEmail(event.target.value)
-            ,
-            __source: {
-                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
                 lineNumber: 198
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Group, {
-            controlId: "formBasicBirthday",
+            controlId: "formBasicEmail",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
                 lineNumber: 201
@@ -42117,6 +42095,30 @@ class ProfileView extends _reactDefault.default.Component {
                 lineNumber: 202
             },
             __self: this
+        }, "Email"), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Control, {
+            type: "email",
+            placeholder: "Change Email",
+            onChange: (event)=>this.setEmail(event.target.value)
+            ,
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
+                lineNumber: 203
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Group, {
+            controlId: "formBasicBirthday",
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
+                lineNumber: 206
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Label, {
+            className: "form-label",
+            __source: {
+                fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
+                lineNumber: 207
+            },
+            __self: this
         }, "Birthday"), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Form.Control, {
             type: "date",
             placeholder: "Change Birthday",
@@ -42124,7 +42126,7 @@ class ProfileView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 203
+                lineNumber: 208
             },
             __self: this
         })), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Button, {
@@ -42132,19 +42134,19 @@ class ProfileView extends _reactDefault.default.Component {
             type: "submit",
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 206
+                lineNumber: 211
             },
             __self: this
         }, "Update"), /*#__PURE__*/ _reactDefault.default.createElement("h3", {
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 210
+                lineNumber: 215
             },
             __self: this
         }, "Delete your Account"), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card.Body, {
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 211
+                lineNumber: 216
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Button, {
@@ -42153,7 +42155,7 @@ class ProfileView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\clove\\Desktop\\myFlix-client\\src\\components\\profile-view\\profile-view.jsx",
-                lineNumber: 212
+                lineNumber: 217
             },
             __self: this
         }, "Delete Account")))))));
@@ -42174,7 +42176,7 @@ exports.default = _reactRedux.connect(mapStateToProps, {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","axios":"7rA65","prop-types":"4dfy5","react-bootstrap":"4n7hB","./profile-view.scss":"1AGDr","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","../../actions/actions":"5S6cN","react-redux":"7GDa4"}],"1AGDr":[function() {},{}],"5S6cN":[function(require,module,exports) {
+},{"react":"3b2NM","axios":"7rA65","prop-types":"4dfy5","react-bootstrap":"4n7hB","./profile-view.scss":"1AGDr","@parcel/transformer-js/src/esmodule-helpers.js":"WDXrg","../../actions/actions":"5S6cN","react-redux":"7GDa4","../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7zzZu"}],"1AGDr":[function() {},{}],"5S6cN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "SET_MOVIES", ()=>SET_MOVIES
@@ -42211,7 +42213,7 @@ function setUser(value) {
     };
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"77zDO"}],"7GDa4":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"WDXrg"}],"7GDa4":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
@@ -43447,7 +43449,7 @@ var _reactDom = require("react-dom");
 exports.unstable_batchedUpdates = _reactDom.unstable_batchedUpdates;
 
 },{"react-dom":"2sg1U"}],"1D2cP":[function(require,module,exports) {
-var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var helpers = require("../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 helpers.prelude(module);
@@ -43528,8 +43530,8 @@ $RefreshReg$(_c, "MoviesList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","react-bootstrap/Col":"2D0r8","react-redux":"7GDa4","../movie-card/movie-card":"79ANl","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr","../visibility-filter-input/visibility-filter-input":"3Mx5i"}],"79ANl":[function(require,module,exports) {
-var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react":"3b2NM","react-bootstrap/Col":"2D0r8","react-redux":"7GDa4","../movie-card/movie-card":"79ANl","@parcel/transformer-js/src/esmodule-helpers.js":"WDXrg","../visibility-filter-input/visibility-filter-input":"3Mx5i","../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7zzZu"}],"79ANl":[function(require,module,exports) {
+var helpers = require("../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 helpers.prelude(module);
@@ -43629,8 +43631,8 @@ exports.default = MovieCard;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","prop-types":"4dfy5","react-bootstrap/Button":"1ru0l","react-bootstrap/Card":"1CZWQ","./movie-card.scss":"4TRBe","react-router-dom":"1PMSK","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr"}],"4TRBe":[function() {},{}],"3Mx5i":[function(require,module,exports) {
-var helpers = require("../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react":"3b2NM","prop-types":"4dfy5","react-bootstrap/Button":"1ru0l","react-bootstrap/Card":"1CZWQ","./movie-card.scss":"4TRBe","react-router-dom":"1PMSK","@parcel/transformer-js/src/esmodule-helpers.js":"WDXrg","../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7zzZu"}],"4TRBe":[function() {},{}],"3Mx5i":[function(require,module,exports) {
+var helpers = require("../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 helpers.prelude(module);
@@ -43669,7 +43671,7 @@ $RefreshReg$(_c, "VisibilityFilterInput");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","react-redux":"7GDa4","react-bootstrap/Form":"6A5ko","../../actions/actions":"5S6cN","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO","../../../../../AppData/Roaming/nvm/v14.16.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3Oiqr"}],"JOw5y":[function() {},{}],"7panR":[function(require,module,exports) {
+},{"react":"3b2NM","react-redux":"7GDa4","react-bootstrap/Form":"6A5ko","../../actions/actions":"5S6cN","@parcel/transformer-js/src/esmodule-helpers.js":"WDXrg","../../../../../AppData/Roaming/nvm/v14.18.0/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7zzZu"}],"JOw5y":[function() {},{}],"7panR":[function(require,module,exports) {
 'use strict';
 Object.defineProperty(exports, '__esModule', {
     value: true
@@ -44252,6 +44254,6 @@ const moviesApp = _redux.combineReducers({
 });
 exports.default = moviesApp;
 
-},{"redux":"7panR","../actions/actions":"5S6cN","@parcel/transformer-js/src/esmodule-helpers.js":"77zDO"}]},["1j6wU","4x6Mp","50ops"], "50ops", "parcelRequire279c")
+},{"redux":"7panR","../actions/actions":"5S6cN","@parcel/transformer-js/src/esmodule-helpers.js":"WDXrg"}]},["1j6wU","4x6Mp","50ops"], "50ops", "parcelRequire279c")
 
 //# sourceMappingURL=index.bf6c691a.js.map

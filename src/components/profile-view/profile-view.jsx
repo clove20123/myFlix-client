@@ -36,10 +36,15 @@ class ProfileView extends React.Component {
     axios.get(`https://my-movie-api-20123.herokuapp.com/users/${username}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
-    .then(response => {
-      this.props.setUser(response.data);
-
-      
+    .then((response) => {
+      this.setState({
+        Name: response.data.Name,
+        Username: response.data.Username,
+        Password: response.data.Password,
+        Email: response.data.Email,
+        Birthdate: response.data.Birthdate,
+        FavoriteMovies: response.data.FavoriteMovies,
+      });
     })
     .catch(function (error) {
       console.log(error);
@@ -152,7 +157,7 @@ class ProfileView extends React.Component {
   }
 
   render() {
-    const { FavoriteMovies, validated } = this.state;
+    const { FavoriteMovies } = this.state;
     const { movies } = this.props;
 
     return (

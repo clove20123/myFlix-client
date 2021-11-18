@@ -31,25 +31,25 @@ class MainView extends React.Component {
     super();
     this.state = {
       
-      user: null
+      
     };
   }
 
-  componentDidMount() {
+  componentDidMount(){
     let accessToken = localStorage.getItem('token');
-    if (accessToken !== null) {
-      this.setState({
-        user: localStorage.getItem('user')
-      });
-      this.getMovies(accessToken);
-    }
+    //if(accessToken !== null){
+      //if(!("Username" in this.props.user)){
+        this.props.setUser(localStorage.getItem('user'));
+      //}
+    //}
+    this.getMovies(accessToken);
   }
 
   onLoggedIn(authData) {
     console.log(authData);
-    this.setState({
-      user: authData.user.Username
-    });
+    this.props.setUser(
+     authData.user.Username
+    );
   
     localStorage.setItem('token', authData.token);
     localStorage.setItem('user', authData.user.Username);
@@ -59,9 +59,9 @@ class MainView extends React.Component {
   onLogout() {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    this.setState({
-      user: null,
-    });
+    this.props.setUser(
+      null
+    );
     console.log("logout successful");
     window.open("/", "_self");
   }
@@ -97,7 +97,7 @@ class MainView extends React.Component {
     
 
     let { movies } = this.props;
-    let { user } = this.state;
+    let { user } = this.props;
     return (
       
       <Router>
